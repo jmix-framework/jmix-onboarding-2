@@ -17,9 +17,9 @@
     </data>
     <layout>
         <vbox>
-            <label id="totalStepsLabel"/>
-            <label id="completedStepsLabel"/>
-            <label id="overdueStepsLabel"/>
+            <span id="totalStepsLabel"/>
+            <span id="completedStepsLabel"/>
+            <span id="overdueStepsLabel"/>
         </vbox>
         <dataGrid width="100%" dataContainer="userStepsDc" id="userStepsDataGrid" classNames="onboarding-steps">
             <columns>

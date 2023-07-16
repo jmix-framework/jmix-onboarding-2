@@ -4,12 +4,11 @@ package com.company.onboarding.view.myonboarding;
 import com.company.onboarding.entity.User;
 import com.company.onboarding.entity.UserStep;
 import com.company.onboarding.view.main.MainView;
-
 import com.vaadin.flow.component.ClickEvent;
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.checkbox.Checkbox;
 import com.vaadin.flow.component.grid.Grid;
-import com.vaadin.flow.component.html.Label;
+import com.vaadin.flow.component.html.Span;
 import com.vaadin.flow.router.Route;
 import io.jmix.core.security.CurrentAuthentication;
 import io.jmix.flowui.UiComponents;
@@ -42,13 +41,13 @@ public class MyOnboardingView extends StandardView {
     private CollectionContainer<UserStep> userStepsDc;
 
     @ViewComponent
-    private Label completedStepsLabel;
+    private Span completedStepsLabel;
 
     @ViewComponent
-    private Label overdueStepsLabel;
+    private Span overdueStepsLabel;
 
     @ViewComponent
-    private Label totalStepsLabel;
+    private Span totalStepsLabel;
 
     @ViewComponent
     private DataContext dataContext;
