@@ -9,14 +9,14 @@ import com.vaadin.flow.component.ClickEvent;
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.checkbox.Checkbox;
 import com.vaadin.flow.component.combobox.ComboBox;
-import com.vaadin.flow.component.grid.Grid;
 import com.vaadin.flow.component.textfield.PasswordField;
+import com.vaadin.flow.data.renderer.ComponentRenderer;
+import com.vaadin.flow.data.renderer.Renderer;
 import com.vaadin.flow.router.Route;
 import io.jmix.core.DataManager;
 import io.jmix.core.EntityStates;
 import io.jmix.flowui.Notifications;
 import io.jmix.flowui.UiComponents;
-import io.jmix.flowui.component.grid.DataGrid;
 import io.jmix.flowui.component.textfield.TypedTextField;
 import io.jmix.flowui.model.CollectionContainer;
 import io.jmix.flowui.model.CollectionPropertyContainer;
@@ -63,30 +63,12 @@ public class UserDetailView extends StandardDetailView<User> {
     private MessageBundle messageBundle;
     @Autowired
     private PasswordEncoder passwordEncoder;
-    @ViewComponent
-    private DataGrid<UserStep> stepsDataGrid;
     @Autowired
     private UiComponents uiComponents;
 
     @Subscribe
     public void onInit(final InitEvent event) {
         timeZoneField.setItems(List.of(TimeZone.getAvailableIDs()));
-
-        Grid.Column<UserStep> completedColumn = stepsDataGrid.addComponentColumn(userStep -> {
-            Checkbox checkbox = uiComponents.create(Checkbox.class);
-            checkbox.setValue(userStep.getCompletedDate() != null);
-            checkbox.addValueChangeListener(e -> {
-                if (userStep.getCompletedDate() == null) {
-                    userStep.setCompletedDate(LocalDate.now());
-                } else {
-                    userStep.setCompletedDate(null);
-                }
-            });
-            return checkbox;
-        });
-        completedColumn.setFlexGrow(0);
-        completedColumn.setWidth("4em");
-        stepsDataGrid.setColumnPosition(completedColumn, 0);
     }
 
     @Subscribe
@@ -146,6 +128,22 @@ public class UserDetailView extends StandardDetailView<User> {
                 stepsDc.getMutableItems().add(userStep);
             }
         }
+    }
+
+    @Supply(to = "stepsDataGrid.completed", subject = "renderer")
+    private Renderer<UserStep> stepsDataGridCompletedRenderer() {
+        return new ComponentRenderer<>(userStep -> {
+            Checkbox checkbox = uiComponents.create(Checkbox.class);
+            checkbox.setValue(userStep.getCompletedDate() != null);
+            checkbox.addValueChangeListener(e -> {
+                if (userStep.getCompletedDate() == null) {
+                    userStep.setCompletedDate(LocalDate.now());
+                } else {
+                    userStep.setCompletedDate(null);
+                }
+            });
+            return checkbox;
+        });
     }
 
     @Subscribe(id = "stepsDc", target = Target.DATA_CONTAINER)

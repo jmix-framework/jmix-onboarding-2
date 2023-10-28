@@ -3,13 +3,13 @@
       xmlns:c="http://jmix.io/schema/flowui/jpql-condition"
       title="msg://departmentListView.title"
       focusComponent="departmentsDataGrid">
-    <data readOnly="true">
+    <data>
         <collection id="departmentsDc"
                     class="com.company.onboarding.entity.Department">
             <fetchPlan extends="_base">
                 <property name="hrManager" fetchPlan="_base"/>
             </fetchPlan>
-            <loader id="departmentsDl">
+            <loader id="departmentsDl" readOnly="true">
                 <query>
                     <![CDATA[select e from Department e]]>
                 </query>
@@ -41,7 +41,7 @@
         <dataGrid id="departmentsDataGrid"
                   width="100%"
                   minHeight="20em"
-                  dataContainer="departmentsDc" columnReorderingAllowed="true">
+                  dataContainer="departmentsDc" columnReorderingAllowed="true" multiSort="true">
             <actions>
                 <action id="create" type="list_create"/>
                 <action id="edit" type="list_edit"/>

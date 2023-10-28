@@ -2,13 +2,13 @@
 <view xmlns="http://jmix.io/schema/flowui/view"
       title="msg://UserListView.title"
       focusComponent="usersDataGrid">
-    <data readOnly="true">
+    <data>
         <collection id="usersDc"
                     class="com.company.onboarding.entity.User">
             <fetchPlan extends="_base">
                 <property name="department" fetchPlan="_base"/>
             </fetchPlan>
-            <loader id="usersDl">
+            <loader id="usersDl" readOnly="true">
                 <query>
                     <![CDATA[select e from User e order by e.username]]>
                 </query>
@@ -40,6 +40,7 @@
                 <items>
                     <actionItem id="changePasswordItem" ref="usersDataGrid.changePassword"/>
                     <actionItem id="resetPasswordItem" ref="usersDataGrid.resetPassword"/>
+                    <actionItem id="showUserSubstitutionsItem" ref="usersDataGrid.showUserSubstitutions"/>
                 </items>
             </dropdownButton>
             <simplePagination id="pagination" dataLoader="usersDl"/>
@@ -55,8 +56,10 @@
                 <action id="showRoleAssignments" type="sec_showRoleAssignments"/>
                 <action id="changePassword" type="sec_changePassword"/>
                 <action id="resetPassword" type="sec_resetPassword"/>
+                <action id="showUserSubstitutions" type="sec_showUserSubstitutions"/>
             </actions>
-            <columns>
+            <columns resizable="true">
+                <column key="picture" sortable="false" flexGrow="0" resizable="false"/>
                 <column property="username"/>
                 <column property="firstName"/>
                 <column property="lastName"/>
