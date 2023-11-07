@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<view xmlns="http://jmix.io/schema/flowui/view"
+      xmlns:maps="http://jmix.io/schema/maps/ui"
+      xmlns:c="http://jmix.io/schema/flowui/jpql-condition"
+      title="msg://locationLookupView.title">
+    <data>
+        <collection id="locationsDc" class="com.company.onboarding.entity.Location">
+            <fetchPlan extends="_base"/>
+            <loader id="locationsDl" readOnly="true">
+                <query>
+                    <![CDATA[select e from Location e]]>
+                    <condition>
+                        <and>
+                            <c:jpql>
+                                <c:where>e.type = :component_locationTypeField</c:where>
+                            </c:jpql>
+                        </and>
+                    </condition>
+                </query>
+            </loader>
+        </collection>
+    </data>
+    <actions>
+        <action id="select" text="msg://selectAction.text" icon="CHECK" actionVariant="PRIMARY" enabled="false"/>
+        <action id="cancel" type="view_close"/>
+    </actions>
+    <facets>
+        <dataLoadCoordinator auto="true"/>
+    </facets>
+    <layout>
+        <entityPicker id="currentLocationField"
+                      label="msg://currentLocationField.label"
+                      metaClass="Location"
+                      readOnly="true"
+                      width="20em">
+        </entityPicker>
+        <hbox padding="false"
+              height="100%"
+              width="100%">
+            <vbox padding="false"
+                  width="25em">
+                <select id="locationTypeField"
+                        emptySelectionAllowed="true"
+                        width="20em"
+                        itemsEnum="com.company.onboarding.entity.LocationType"/>
+                <virtualList id="locationVirtualList" itemsContainer="locationsDc"
+                             minHeight="20em"
+                             width="20em"/>
+            </vbox>
+            <maps:geoMap id="map"
+                         height="100%"
+                         width="100%">
+                <maps:mapView centerX="0" centerY="51">
+                    <maps:extent minX="-15" minY="30" maxX="40" maxY="60"/>
+                </maps:mapView>
+                <maps:layers>
+                    <maps:tile>
+                        <maps:osmSource/>
+                    </maps:tile>
+                    <maps:vector id="vectorLayer">
+                        <maps:vectorSource/>
+                    </maps:vector>
+                    <maps:vector id="dataVectorLayer">
+                        <maps:dataVectorSource dataContainer="locationsDc"/>
+                    </maps:vector>
+                </maps:layers>
+            </maps:geoMap>
+        </hbox>
+        <hbox id="controlLayout">
+            <button id="selectBtn" action="select"/>
+            <button id="cancelBtn" action="cancel"/>
+        </hbox>
+    </layout>
+</view>

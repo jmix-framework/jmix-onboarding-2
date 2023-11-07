@@ -57,11 +57,17 @@
                            classNames="user-picture"/>
                 </hbox>
             </details>
+            <valuePicker id="locationValuePicker" property="location">
+                <actions>
+                    <action id="select" icon="SEARCH"/>
+                    <action id="clear" type="value_clear"/>
+                </actions>
+            </valuePicker>
         </formLayout>
         <hbox id="buttonsPanel" classNames="buttons-panel">
             <button id="generateButton" text="Generate"/>
         </hbox>
-        <dataGrid id="stepsDataGrid" dataContainer="stepsDc" width="100%" height="100%">
+        <dataGrid id="stepsDataGrid" dataContainer="stepsDc" minHeight="20em" width="100%" height="100%">
             <columns>
                 <column key="completed" sortable="false" width="4em" flexGrow="0"/>
                 <column property="step.name"/>

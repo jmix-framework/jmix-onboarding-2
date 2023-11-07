@@ -9,6 +9,7 @@ import io.jmix.core.metamodel.annotation.Composition;
 import io.jmix.core.metamodel.annotation.DependsOnProperties;
 import io.jmix.core.metamodel.annotation.InstanceName;
 import io.jmix.core.metamodel.annotation.JmixEntity;
+import io.jmix.maps.Geometry;
 import io.jmix.security.authentication.JmixUserDetails;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;
@@ -24,7 +25,8 @@ import java.util.UUID;
 @Entity
 @Table(name = "USER_", indexes = {
         @Index(name = "IDX_USER__ON_USERNAME", columnList = "USERNAME", unique = true),
-        @Index(name = "IDX_USER__DEPARTMENT", columnList = "DEPARTMENT_ID")
+        @Index(name = "IDX_USER__DEPARTMENT", columnList = "DEPARTMENT_ID"),
+        @Index(name = "IDX_USER__LOCATION", columnList = "LOCATION_ID")
 })
 public class User implements JmixUserDetails, HasTimeZone {
 
@@ -79,8 +81,20 @@ public class User implements JmixUserDetails, HasTimeZone {
     @Column(name = "PICTURE", length = 1024)
     private FileRef picture;
 
+    @JoinColumn(name = "LOCATION_ID")
+    @OneToOne(fetch = FetchType.LAZY)
+    private Location location;
+
     @Transient
     protected Collection<? extends GrantedAuthority> authorities;
+
+    public Location getLocation() {
+        return location;
+    }
+
+    public void setLocation(Location location) {
+        this.location = location;
+    }
 
     public FileRef getPicture() {
         return picture;
