@@ -10,6 +10,10 @@ jmix {
     bomVersion = '2.1.0-RC1'
 }
 
+vaadin {
+    optimizeBundle = false
+}
+
 group = 'com.company'
 version = '0.0.1-SNAPSHOT'
 
