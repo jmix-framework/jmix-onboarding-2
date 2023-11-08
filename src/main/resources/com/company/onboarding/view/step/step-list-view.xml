@@ -3,11 +3,11 @@
       xmlns:c="http://jmix.io/schema/flowui/jpql-condition"
       title="msg://stepListView.title"
       focusComponent="stepsDataGrid">
-    <data readOnly="true">
+    <data>
         <collection id="stepsDc"
                     class="com.company.onboarding.entity.Step">
             <fetchPlan extends="_base"/>
-            <loader id="stepsDl">
+            <loader id="stepsDl" readOnly="true">
                 <query>
                     <![CDATA[select e from Step e]]>
                 </query>
