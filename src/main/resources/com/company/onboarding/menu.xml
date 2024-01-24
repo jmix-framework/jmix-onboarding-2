@@ -6,5 +6,6 @@
         <item view="User.list" title="msg://com.company.onboarding.view.user/UserListView.title"/>
         <item view="Step.list" title="msg://com.company.onboarding.view.step/stepListView.title"/>
         <item view="Department.list" title="msg://com.company.onboarding.view.department/departmentListView.title"/>
+        <item view="KnowledgeBaseView" title="msg://com.company.onboarding.view.knowledgebase/knowledgeBaseView.title"/>
     </menu>
 </menu-config>

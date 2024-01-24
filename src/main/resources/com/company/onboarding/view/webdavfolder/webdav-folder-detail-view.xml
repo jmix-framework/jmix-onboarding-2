@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<view xmlns="http://jmix.io/schema/flowui/view"
+      title="msg://webdavFolderDetailView.title"
+      focusComponent="form">
+    <data>
+        <instance id="webdavFolderDc"
+                  class="com.company.onboarding.entity.WebdavFolder">
+            <fetchPlan extends="_base">
+                <property name="department" fetchPlan="_base"/>
+                <property name="parent" fetchPlan="_base"/>
+            </fetchPlan>
+            <loader/>
+        </instance>
+    </data>
+    <facets>
+        <dataLoadCoordinator auto="true"/>
+    </facets>
+    <actions>
+        <action id="saveAction" type="detail_saveClose"/>
+        <action id="closeAction" type="detail_close"/>
+    </actions>
+    <layout>
+        <formLayout id="form" dataContainer="webdavFolderDc">
+            <responsiveSteps>
+                <responsiveStep minWidth="0" columns="1" labelsPosition="ASIDE"/>
+            </responsiveSteps>
+            <formItem>
+                <textField id="nameField" property="name" required="true"/>
+            </formItem>
+            <formItem>
+                <select id="classificationField" property="classification" required="true"/>
+            </formItem>
+            <formItem>
+                <entityPicker id="departmentField" property="department" required="true">
+                    <actions>
+                        <action id="entityLookup" type="entity_lookup"/>
+                        <action id="entityClear" type="entity_clear"/>
+                    </actions>
+                </entityPicker>
+            </formItem>
+            <formItem>
+                <entityPicker id="parentField" property="parent" readOnly="true">
+                    <actions>
+                        <action id="entityLookup" type="entity_lookup"/>
+                        <action id="entityClear" type="entity_clear"/>
+                    </actions>
+                </entityPicker>
+            </formItem>
+        </formLayout>
+        <hbox id="detailActions">
+            <button id="saveAndCloseBtn" action="saveAction"/>
+            <button id="closeBtn" action="closeAction"/>
+        </hbox>
+    </layout>
+</view>

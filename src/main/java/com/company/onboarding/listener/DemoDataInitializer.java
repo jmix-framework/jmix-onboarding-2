@@ -4,6 +4,7 @@ import com.company.onboarding.entity.Department;
 import com.company.onboarding.entity.Step;
 import com.company.onboarding.entity.User;
 import com.company.onboarding.entity.UserStep;
+import com.company.onboarding.security.WebdavFoldersRestrictionsRole;
 import io.jmix.core.DataManager;
 import io.jmix.core.FileRef;
 import io.jmix.core.FileStorage;
@@ -11,6 +12,8 @@ import io.jmix.core.SaveContext;
 import io.jmix.core.security.Authenticated;
 import io.jmix.security.role.assignment.RoleAssignmentRoleType;
 import io.jmix.securitydata.entity.RoleAssignmentEntity;
+import io.jmix.webdavflowui.role.WebdavDocumentBrowserRole;
+import io.jmix.webdavflowui.role.WebdavMinimalRole;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.context.event.ApplicationStartedEvent;
 import org.springframework.context.event.EventListener;
@@ -288,11 +291,29 @@ public class DemoDataInitializer {
             roleAssignment.setRoleType(RoleAssignmentRoleType.RESOURCE);
             dataManager.save(roleAssignment);
 
+            roleAssignment = dataManager.create(RoleAssignmentEntity.class);
+            roleAssignment.setUsername(user.getUsername());
+            roleAssignment.setRoleCode(WebdavMinimalRole.CODE);
+            roleAssignment.setRoleType(RoleAssignmentRoleType.RESOURCE);
+            dataManager.save(roleAssignment);
+
             if (isHrManager) {
                 roleAssignment = dataManager.create(RoleAssignmentEntity.class);
                 roleAssignment.setUsername(user.getUsername());
                 roleAssignment.setRoleCode("hr-manager-rl");
                 roleAssignment.setRoleType(RoleAssignmentRoleType.ROW_LEVEL);
+                dataManager.save(roleAssignment);
+
+                roleAssignment = dataManager.create(RoleAssignmentEntity.class);
+                roleAssignment.setUsername(user.getUsername());
+                roleAssignment.setRoleCode(WebdavFoldersRestrictionsRole.CODE);
+                roleAssignment.setRoleType(RoleAssignmentRoleType.ROW_LEVEL);
+                dataManager.save(roleAssignment);
+
+                roleAssignment = dataManager.create(RoleAssignmentEntity.class);
+                roleAssignment.setUsername(user.getUsername());
+                roleAssignment.setRoleCode(WebdavDocumentBrowserRole.CODE);
+                roleAssignment.setRoleType(RoleAssignmentRoleType.RESOURCE);
                 dataManager.save(roleAssignment);
             }
         }

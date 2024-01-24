@@ -4,6 +4,7 @@ import com.company.onboarding.entity.Department;
 import com.company.onboarding.entity.User;
 import io.jmix.security.role.annotation.JpqlRowLevelPolicy;
 import io.jmix.security.role.annotation.RowLevelRole;
+import io.jmix.webdavflowui.role.WebdavMinimalRole;
 
 @RowLevelRole(name = "HR manager's departments and users",
         code = "hr-manager-rl")

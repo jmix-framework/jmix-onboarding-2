@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<view xmlns="http://jmix.io/schema/flowui/view"
+      title="msg://knowledgeBaseView.title">
+    <data>
+        <collection id="webdavFoldersDc" class="com.company.onboarding.entity.WebdavFolder">
+            <fetchPlan extends="_base"/>
+            <loader id="webdavFoldersDl">
+                <query>
+                    <![CDATA[select e from WebdavFolder e  ]]>
+                </query>
+            </loader>
+        </collection>
+        <collection id="webdavDocumentWrappersDc" class="com.company.onboarding.entity.WebdavDocumentWrapper">
+            <fetchPlan extends="_base">
+                <property name="webdavDocument" fetchPlan="_base">
+                    <property name="lastVersion" fetchPlan="_base"/>
+                </property>
+            </fetchPlan>
+            <loader id="webdavDocumentWrappersDl" readOnly="true">
+                <query>
+                    <![CDATA[select e from WebdavDocumentWrapper e where e.folder = :folder  ]]>
+                </query>
+            </loader>
+        </collection>
+    </data>
+    <!--<facets>
+        <dataLoadCoordinator auto="true"/>
+    </facets>-->
+    <layout>
+        <split width="100%" height="100%" splitterPosition="17">
+            <vbox expand="webdavFoldersDataGrid">
+                <hbox id="webdavFoldersButtonsPanel" classNames="buttons-panel">
+                    <button id="createFolderBtn" action="webdavFoldersDataGrid.create"/>
+                    <button id="editFolderBtn" action="webdavFoldersDataGrid.edit"/>
+                    <button id="removeFolderBtn" action="webdavFoldersDataGrid.remove"/>
+                </hbox>
+                <treeDataGrid width="100%" id="webdavFoldersDataGrid" dataContainer="webdavFoldersDc"
+                              hierarchyProperty="parent">
+                    <actions>
+                        <action id="create" type="list_create">
+                            <properties>
+                                <property name="openMode" value="DIALOG"/>
+                            </properties>
+                        </action>
+                        <action id="edit" type="list_edit">
+                            <properties>
+                                <property name="openMode" value="DIALOG"/>
+                            </properties>
+                        </action>
+                        <action id="remove" type="list_remove"/>
+                    </actions>
+                    <columns>
+                        <column property="name"/>
+                    </columns>
+                </treeDataGrid>
+            </vbox>
+            <vbox expand="webdavDocumentWrappersDataGrid">
+                <hbox id="documentsButtonsPanel" classNames="buttons-panel">
+                    <button id="createDocumentBtn" action="webdavDocumentWrappersDataGrid.create"/>
+                    <button id="editDocumentBtn" action="webdavDocumentWrappersDataGrid.edit"/>
+                    <button id="removeDocumentBtn" action="webdavDocumentWrappersDataGrid.remove"/>
+                    <button id="downloadDocumentBtn" action="webdavDocumentWrappersDataGrid.download" icon="font-icon:DOWNLOAD"/>
+                </hbox>
+                <dataGrid width="100%" id="webdavDocumentWrappersDataGrid" dataContainer="webdavDocumentWrappersDc">
+                    <actions>
+                        <action id="create" type="list_create">
+                            <properties>
+                                <property name="openMode" value="DIALOG"/>
+                            </properties>
+                        </action>
+                        <action id="edit" type="list_edit">
+                            <properties>
+                                <property name="openMode" value="DIALOG"/>
+                            </properties>
+                        </action>
+                        <action id="remove" type="list_remove"/>
+                        <action id="download" text="msg://download"/>
+                    </actions>
+                    <columns>
+                        <column property="webdavDocument"/>
+                        <column property="description"/>
+                        <column property="lastModifiedBy"/>
+                        <column property="lastModifiedDate"/>
+                    </columns>
+                </dataGrid>
+            </vbox>
+        </split>
+    </layout>
+</view>

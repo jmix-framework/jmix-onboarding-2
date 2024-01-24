@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<view xmlns="http://jmix.io/schema/flowui/view"
+      title="msg://webdavDocumentWrapperDetailView.title"
+      xmlns:webdav="http://jmix.io/schema/webdav/ui"
+      focusComponent="form">
+    <data>
+        <instance id="webdavDocumentWrapperDc"
+                  class="com.company.onboarding.entity.WebdavDocumentWrapper">
+            <fetchPlan extends="_base">
+                <property name="webdavDocument" fetchPlan="_base"/>
+                <property name="folder" fetchPlan="_base">
+                    <property name="department" fetchPlan="_base"/>
+                </property>
+            </fetchPlan>
+            <loader/>
+        </instance>
+    </data>
+    <facets>
+        <dataLoadCoordinator auto="true"/>
+    </facets>
+    <actions>
+        <action id="saveAction" type="detail_saveClose"/>
+        <action id="closeAction" type="detail_close"/>
+    </actions>
+    <layout>
+        <formLayout id="form" dataContainer="webdavDocumentWrapperDc">
+            <textField id="descriptionField" property="description" colspan="2"/>
+            <webdav:webdavDocumentUpload id="webdavDocumentField" property="webdavDocument" colspan="2"/>
+            <!--<textField id="lastModifiedByField" property="lastModifiedBy" readOnly="true"/>
+            <dateTimePicker id="lastModifiedDateField" property="lastModifiedDate" readOnly="true"/>
+            <entityPicker id="folderField" property="folder" readOnly="true">
+                <actions>
+                    <action id="entityLookup" type="entity_lookup"/>
+                    <action id="entityClear" type="entity_clear"/>
+                </actions>
+            </entityPicker>-->
+        </formLayout>
+        <hbox id="detailActions">
+            <button id="saveAndCloseBtn" action="saveAction"/>
+            <button id="closeBtn" action="closeAction"/>
+        </hbox>
+    </layout>
+</view>
