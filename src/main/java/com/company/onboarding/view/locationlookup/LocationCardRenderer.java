@@ -16,6 +16,8 @@ import io.jmix.core.Messages;
 import io.jmix.flowui.UiComponents;
 import io.jmix.flowui.kit.component.button.JmixButton;
 import io.jmix.mapsflowui.component.GeoMap;
+import io.jmix.mapsflowui.component.model.FitOptions;
+import io.jmix.mapsflowui.kit.component.model.Easing;
 import org.springframework.context.ApplicationContext;
 
 import java.util.function.Consumer;
@@ -66,8 +68,10 @@ public class LocationCardRenderer extends ComponentRenderer<VerticalLayout, Loca
         searchBtn.setIcon(VaadinIcon.SEARCH.create());
         searchBtn.addThemeVariants(ButtonVariant.LUMO_TERTIARY);
         searchBtn.addClickListener(event -> {
-            map.getMapView().setCenter(location.getBuilding().getCoordinate());
-            map.getMapView().setZoom(20);
+            map.fit(new FitOptions(location.getBuilding())
+                    .withDuration(2000)
+                    .withEasing(Easing.LINEAR)
+                    .withMaxZoom(20d));
         });
         Button selectBtn = uiComponents.create(JmixButton.class);
         selectBtn.setText(messages.getMessage("com.company.onboarding.view.user", "locationVirtualList.selectBtn.text"));

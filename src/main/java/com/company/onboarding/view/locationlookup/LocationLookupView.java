@@ -6,20 +6,15 @@ import com.company.onboarding.view.main.MainView;
 
 import com.vaadin.flow.data.renderer.Renderer;
 import com.vaadin.flow.router.Route;
-import com.vaadin.flow.server.StreamResource;
 import io.jmix.flowui.component.valuepicker.EntityPicker;
 import io.jmix.flowui.kit.action.ActionPerformedEvent;
 import io.jmix.flowui.kit.action.BaseAction;
-import io.jmix.flowui.model.CollectionContainer;
 import io.jmix.flowui.view.*;
 import io.jmix.mapsflowui.component.GeoMap;
-import io.jmix.mapsflowui.component.model.feature.LineStringFeature;
-import io.jmix.mapsflowui.component.model.feature.PointFeature;
-import io.jmix.mapsflowui.component.model.feature.PolygonFeature;
-import io.jmix.mapsflowui.component.model.layer.VectorLayer;
+import io.jmix.mapsflowui.component.model.FitOptions;
 import io.jmix.mapsflowui.component.model.source.DataVectorSource;
-import io.jmix.mapsflowui.component.model.source.VectorSource;
-import io.jmix.mapsflowui.kit.component.model.feature.Feature;
+import io.jmix.mapsflowui.kit.component.model.Easing;
+import io.jmix.mapsflowui.kit.component.model.Padding;
 import io.jmix.mapsflowui.kit.component.model.style.Fill;
 import io.jmix.mapsflowui.kit.component.model.style.Style;
 import io.jmix.mapsflowui.kit.component.model.style.image.Anchor;
@@ -27,9 +22,8 @@ import io.jmix.mapsflowui.kit.component.model.style.image.CircleStyle;
 import io.jmix.mapsflowui.kit.component.model.style.image.IconOrigin;
 import io.jmix.mapsflowui.kit.component.model.style.image.IconStyle;
 import io.jmix.mapsflowui.kit.component.model.style.stroke.Stroke;
-import io.jmix.mapsflowui.kit.component.model.style.text.Padding;
 import io.jmix.mapsflowui.kit.component.model.style.text.TextStyle;
-import org.locationtech.jts.geom.Coordinate;
+import org.locationtech.jts.geom.Geometry;
 import org.springframework.lang.Nullable;
 
 import java.util.List;
@@ -47,31 +41,23 @@ public class LocationLookupView extends StandardView {
     @ViewComponent
     private EntityPicker<Location> currentLocationField;
 
+    @ViewComponent("map.pathToBuildingLayer.pathToBuildingSource")
+    private DataVectorSource<Location> pathToBuildingSource;
+    @ViewComponent("map.buildingLayer.buildingSource")
+    private DataVectorSource<Location> buildingSource;
+    @ViewComponent("map.buildingEntranceLayer.buildingEntranceSource")
+    private DataVectorSource<Location> buildingEntranceSource;
+    @ViewComponent("map.buildingAreaLayer.buildingAreaSource")
+    private DataVectorSource<Location> buildingAreaSource;
+
     private Location selected;
 
     @Subscribe
     public void onInit(final InitEvent event) {
-        initGeoMap();
-    }
-
-    @Subscribe(id = "locationsDc", target = Target.DATA_CONTAINER)
-    public void onLocationsDcCollectionChange(final CollectionContainer.CollectionChangeEvent<Location> event) {
-        VectorLayer testLayer = map.getLayer("vectorLayer");
-        VectorSource source = testLayer.getSource();
-
-        source.removeAllFeatures();
-
-        for (Location location : event.getSource().getItems()) {
-            if (location.getBuildingArea() != null) {
-                source.addFeature(createBuildingAreaFeature(location));
-            }
-            if (location.getBuildingEntrance() != null) {
-                source.addFeature(createBuildingEntranceFeature(location));
-            }
-            if (location.getPathToBuilding() != null) {
-                source.addFeature(createPathToBuildingFeature(location));
-            }
-        }
+        initBuildingSource();
+        initBuildingAreaSource();
+        initBuildingEntranceSource();
+        initPathToBuildingSource();
     }
 
     @Subscribe("select")
@@ -89,7 +75,7 @@ public class LocationLookupView extends StandardView {
         currentLocationField.setValue(selected);
 
         if (selected != null) {
-            setMapCenter(selected.getBuilding().getCoordinate());
+            setMapCenter(selected.getBuilding());
         }
     }
 
@@ -98,24 +84,15 @@ public class LocationLookupView extends StandardView {
         return new LocationCardRenderer(getApplicationContext(), map, this::onLocationChanged);
     }
 
-    private void initGeoMap() {
-        StreamResource officeIconResource = new StreamResource("office-marker.png",
-                () -> getClass()
-                        .getResourceAsStream("/META-INF/resources/icons/office-marker.png"));
-        StreamResource coworkingIconResource = new StreamResource("coworking-marker.png",
-                () -> getClass()
-                        .getResourceAsStream("/META-INF/frontend/jmix-openlayers-map/icon/marker.png"));
-
-        VectorLayer layer = map.getLayer("dataVectorLayer");
-        DataVectorSource<Location> source = layer.getSource();
-        source.setStyleProvider(location -> new Style()
+    private void initBuildingSource() {
+        buildingSource.setStyleProvider(location -> new Style()
                 .withImage(new IconStyle()
                         .withScale(0.5)
                         .withAnchorOrigin(IconOrigin.BOTTOM_LEFT)
                         .withAnchor(new Anchor(0.49, 0.12))
-                        .withResource(location.getType() == LocationType.OFFICE
-                                ? officeIconResource
-                                : coworkingIconResource))
+                        .withSrc(location.getType() == LocationType.OFFICE
+                                ? "map-icons/office-marker.png"
+                                : "map-icons/coworking-marker.png"))
                 .withText(new TextStyle()
                         .withBackgroundFill(new Fill("rgba(255, 255, 255, 0.6)"))
                         .withPadding(new Padding(5, 5, 5, 5))
@@ -123,44 +100,45 @@ public class LocationLookupView extends StandardView {
                         .withFont("bold 15px sans-serif")
                         .withText(location.getCity())));
 
-        source.addGeoObjectClickListener(clickEvent -> {
+        buildingSource.addGeoObjectClickListener(clickEvent -> {
             Location location = clickEvent.getItem();
 
-            setMapCenter(location.getBuilding().getCoordinate());
+            setMapCenter(location.getBuilding());
 
             onLocationChanged(location);
         });
     }
 
-    private Feature createBuildingAreaFeature(Location location) {
-        String fillColor = "rgba(52, 216, 0, 0.2)";
-        String strokeColor = "#228D00";
-        if (location.getType() == LocationType.COWORKING) {
-            fillColor = "rgba(1, 147, 154, 0.2)";
-            strokeColor = "#123EAB";
-        }
-        return new PolygonFeature(location.getBuildingArea())
-                .addStyles(new Style()
-                        .withFill(new Fill(fillColor))
-                        .withStroke(new Stroke()
-                                .withWidth(2d)
-                                .withColor(strokeColor)));
+    private void initBuildingAreaSource() {
+        buildingAreaSource.setStyleProvider(location -> {
+            String fillColor = location.getType() == LocationType.COWORKING
+                    ? "rgba(52, 216, 0, 0.2)"
+                    : "rgba(1, 147, 154, 0.2)";
+            String strokeColor = location.getType() == LocationType.COWORKING
+                    ? "#228D00"
+                    : "#123EAB";
+            return new Style()
+                    .withFill(new Fill(fillColor))
+                    .withStroke(new Stroke()
+                            .withWidth(2d)
+                            .withColor(strokeColor));
+        });
     }
 
-    private Feature createBuildingEntranceFeature(Location location) {
-        return new PointFeature(location.getBuildingEntrance())
-                .addStyles(new Style()
+    private void initBuildingEntranceSource() {
+        buildingEntranceSource.setStyleProvider((location ->
+                new Style()
                         .withImage(new CircleStyle()
                                 .withRadius(4)
                                 .withFill(new Fill("#000000"))
                                 .withStroke(new Stroke()
                                         .withWidth(2d)
-                                        .withColor("#ffffff"))));
+                                        .withColor("#ffffff")))));
     }
 
-    private Feature createPathToBuildingFeature(Location location) {
-        return new LineStringFeature(location.getPathToBuilding())
-                .addStyles(new Style()
+    private void initPathToBuildingSource() {
+        pathToBuildingSource.setStyleProvider(location ->
+                new Style()
                         .withStroke(new Stroke()
                                 .withWidth(2d)
                                 .withColor("#000000")
@@ -172,14 +150,16 @@ public class LocationLookupView extends StandardView {
             selected = newLocation;
             select.setEnabled(true);
 
-            setMapCenter(newLocation.getBuilding().getCoordinate());
+            setMapCenter(newLocation.getBuilding());
 
             currentLocationField.setValue(newLocation);
         }
     }
 
-    private void setMapCenter(Coordinate center) {
-        map.getMapView().setCenter(center);
-        map.getMapView().setZoom(20);
+    private void setMapCenter(Geometry center) {
+        map.fit(new FitOptions(center)
+                .withDuration(3000)
+                .withEasing(Easing.LINEAR)
+                .withMaxZoom(20d));
     }
 }

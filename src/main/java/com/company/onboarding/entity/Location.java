@@ -3,7 +3,6 @@ package com.company.onboarding.entity;
 import io.jmix.core.entity.annotation.JmixGeneratedValue;
 import io.jmix.core.metamodel.annotation.InstanceName;
 import io.jmix.core.metamodel.annotation.JmixEntity;
-import io.jmix.maps.Geometry;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
 import org.locationtech.jts.geom.LineString;
@@ -35,7 +34,6 @@ public class Location {
 
     @NotNull
     @Column(name = "BUILDING", nullable = false)
-    @Geometry
     private Point building;
 
     @Column(name = "BUILDING_AREA")

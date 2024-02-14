@@ -57,11 +57,25 @@
                     <maps:tile>
                         <maps:osmSource/>
                     </maps:tile>
-                    <maps:vector id="vectorLayer">
-                        <maps:vectorSource/>
+                    <maps:vector id="buildingAreaLayer">
+                        <maps:dataVectorSource id="buildingAreaSource"
+                                               dataContainer="locationsDc"
+                                               property="buildingArea"/>
                     </maps:vector>
-                    <maps:vector id="dataVectorLayer">
-                        <maps:dataVectorSource dataContainer="locationsDc"/>
+                    <maps:vector id="pathToBuildingLayer">
+                        <maps:dataVectorSource id="pathToBuildingSource"
+                                               dataContainer="locationsDc"
+                                               property="pathToBuilding"/>
+                    </maps:vector>
+                    <maps:vector id="buildingEntranceLayer">
+                        <maps:dataVectorSource id="buildingEntranceSource"
+                                               dataContainer="locationsDc"
+                                               property="buildingEntrance"/>
+                    </maps:vector>
+                    <maps:vector id="buildingLayer">
+                        <maps:dataVectorSource id="buildingSource"
+                                               dataContainer="locationsDc"
+                                               property="building"/>
                     </maps:vector>
                 </maps:layers>
             </maps:geoMap>
