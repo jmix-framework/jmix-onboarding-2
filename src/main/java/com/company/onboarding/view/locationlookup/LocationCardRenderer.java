@@ -69,8 +69,6 @@ public class LocationCardRenderer extends ComponentRenderer<VerticalLayout, Loca
         searchBtn.addThemeVariants(ButtonVariant.LUMO_TERTIARY);
         searchBtn.addClickListener(event -> {
             map.fit(new FitOptions(location.getBuilding())
-                    .withDuration(2000)
-                    .withEasing(Easing.LINEAR)
                     .withMaxZoom(20d));
         });
         Button selectBtn = uiComponents.create(JmixButton.class);

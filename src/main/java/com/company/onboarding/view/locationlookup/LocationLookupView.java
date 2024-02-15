@@ -157,9 +157,6 @@ public class LocationLookupView extends StandardView {
     }
 
     private void setMapCenter(Geometry center) {
-        map.fit(new FitOptions(center)
-                .withDuration(3000)
-                .withEasing(Easing.LINEAR)
-                .withMaxZoom(20d));
+        map.fit(new FitOptions(center).withMaxZoom(20d));
     }
 }
