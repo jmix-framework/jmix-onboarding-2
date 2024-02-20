@@ -1,6 +1,5 @@
 package com.company.onboarding.security;
 
-import com.company.onboarding.entity.Document;
 import com.company.onboarding.entity.Step;
 import com.company.onboarding.entity.User;
 import com.company.onboarding.entity.UserStep;
@@ -9,15 +8,13 @@ import io.jmix.security.model.EntityPolicyAction;
 import io.jmix.security.role.annotation.EntityAttributePolicy;
 import io.jmix.security.role.annotation.EntityPolicy;
 import io.jmix.security.role.annotation.ResourceRole;
-import io.jmix.security.role.annotation.SpecificPolicy;
 import io.jmix.securityflowui.role.annotation.MenuPolicy;
 import io.jmix.securityflowui.role.annotation.ViewPolicy;
 
-@ResourceRole(name = "Employee", code = "employee")
+@ResourceRole(name = "Employee", code = "employee", scope = "UI")
 public interface EmployeeRole {
-
-    @MenuPolicy(menuIds = {"MyOnboardingView", "Document.list"})
-    @ViewPolicy(viewIds = {"MyOnboardingView", "Document.list", "Document.detail"})
+    @MenuPolicy(menuIds = "MyOnboardingView")
+    @ViewPolicy(viewIds = "MyOnboardingView")
     void screens();
 
     @EntityAttributePolicy(entityClass = User.class,
@@ -34,19 +31,10 @@ public interface EmployeeRole {
             actions = {EntityPolicyAction.READ, EntityPolicyAction.UPDATE})
     void userStep();
 
-    @EntityAttributePolicy(entityClass = Document.class, attributes = "signedFile", action = EntityAttributePolicyAction.MODIFY)
-    @EntityAttributePolicy(entityClass = Document.class, attributes = {"id", "name", "file", "user", "dateSigned", "status"}, action = EntityAttributePolicyAction.VIEW)
-    @EntityPolicy(entityClass = Document.class,
-            actions = {EntityPolicyAction.READ, EntityPolicyAction.UPDATE})
-    void document();
-
     @EntityAttributePolicy(entityClass = Step.class,
             attributes = "*",
             action = EntityAttributePolicyAction.VIEW)
     @EntityPolicy(entityClass = Step.class,
             actions = EntityPolicyAction.READ)
     void step();
-
-    @SpecificPolicy(resources = {"rest.fileUpload.enabled", "rest.fileDownload.enabled", "rest.enabled"})
-    void specific();
 }

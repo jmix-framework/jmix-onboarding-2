@@ -36,7 +36,6 @@
             <button id="editBtn" action="usersDataGrid.edit"/>
             <button id="removeBtn" action="usersDataGrid.remove"/>
             <button id="showRoleAssignmentsBtn" action="usersDataGrid.showRoleAssignments"/>
-            <button action="usersDataGrid.prepareDocuments"/>
             <dropdownButton id="additionalBtn" text="msg://additionalMenu" icon="COG">
                 <items>
                     <actionItem id="changePasswordItem" ref="usersDataGrid.changePassword"/>
@@ -57,7 +56,6 @@
                 <action id="showRoleAssignments" type="sec_showRoleAssignments"/>
                 <action id="changePassword" type="sec_changePassword"/>
                 <action id="resetPassword" type="sec_resetPassword"/>
-                <action id="prepareDocuments" type="list_itemTracking" text="msg://prepareDocuments" icon="FILE"/>
                 <action id="showUserSubstitutions" type="sec_showUserSubstitutions"/>
             </actions>
             <columns resizable="true">
