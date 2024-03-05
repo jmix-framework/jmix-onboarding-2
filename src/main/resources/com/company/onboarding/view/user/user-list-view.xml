@@ -43,6 +43,8 @@
                     <actionItem id="showUserSubstitutionsItem" ref="usersDataGrid.showUserSubstitutions"/>
                 </items>
             </dropdownButton>
+            <button id="prepareReportBtn" action="usersDataGrid.prepareAction"/>
+            <button id="printReportBtn" text="msg://printReportBtn.text" icon="vaadin:print"/>
             <simplePagination id="pagination" dataLoader="usersDl"/>
         </hbox>
         <dataGrid id="usersDataGrid"
@@ -57,6 +59,7 @@
                 <action id="changePassword" type="sec_changePassword"/>
                 <action id="resetPassword" type="sec_resetPassword"/>
                 <action id="showUserSubstitutions" type="sec_showUserSubstitutions"/>
+                <action id="prepareAction" icon="vaadin:print" text="msg://prepareReportBtn.text" type="list_itemTracking"/>
             </actions>
             <columns resizable="true">
                 <column key="picture" sortable="false" flexGrow="0" resizable="false"/>

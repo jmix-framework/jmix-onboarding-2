@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<view xmlns="http://jmix.io/schema/flowui/view"
+      title="msg://documentDetailView.title"
+      focusComponent="form">
+    <data>
+        <instance id="documentDc"
+                  class="com.company.onboarding.entity.Document">
+            <fetchPlan extends="_base">
+                <property name="user" fetchPlan="_base"/>
+            </fetchPlan>
+            <loader/>
+        </instance>
+    </data>
+    <facets>
+        <dataLoadCoordinator auto="true"/>
+    </facets>
+    <actions>
+        <action id="saveAction" type="detail_saveClose"/>
+        <action id="closeAction" type="detail_close"/>
+    </actions>
+    <layout expand="generalBox">
+        <hbox id="generalBox" expand="documentFrame" width="100%">
+            <vbox id="detailsBox"
+                  width="50em"
+                  classNames="document-border"
+                  expand="form">
+                <formLayout id="form"
+                            dataContainer="documentDc">
+                    <responsiveSteps>
+                        <responsiveStep minWidth="40em" columns="1"/>
+                    </responsiveSteps>
+                    <textField id="nameField" property="name"/>
+                    <entityPicker id="userField" property="user">
+                        <actions>
+                            <action id="entityLookup" type="entity_lookup"/>
+                            <action id="entityClear" type="entity_clear"/>
+                        </actions>
+                    </entityPicker>
+                    <fileStorageUploadField id="fileField"
+                                            property="file"
+                                            fileNameVisible="true"/>
+                </formLayout>
+            </vbox>
+            <div id="documentFrame"/>
+        </hbox>
+        <hbox id="detailActions">
+            <button id="saveAndCloseBtn" action="saveAction"/>
+            <button id="closeBtn" action="closeAction"/>
+        </hbox>
+    </layout>
+</view>
