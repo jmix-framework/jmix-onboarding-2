@@ -123,6 +123,7 @@ public class DemoDataInitializer {
         user.setDepartment(departments.get(0));
         user.setJoiningDate(LocalDate.now().minusYears(2).minusWeeks(3));
         user.setPicture(uploadPicture("com/company/onboarding/demo/" , "alice.png"));
+        user.setSalary(60000f);
         saveContext.saving(user);
         list.add(user);
         for (Step step : steps) {
@@ -149,6 +150,7 @@ public class DemoDataInitializer {
         user.setDepartment(departments.get(0));
         user.setJoiningDate(LocalDate.now().minusYears(1).minusWeeks(5));
         user.setPicture(uploadPicture("com/company/onboarding/demo/" , "james.png"));
+        user.setSalary(80000f);
         saveContext.saving(user);
         list.add(user);
         for (Step step : steps) {
@@ -175,6 +177,7 @@ public class DemoDataInitializer {
         user.setDepartment(departments.get(1));
         user.setJoiningDate(LocalDate.now().minusDays(3));
         user.setPicture(uploadPicture("com/company/onboarding/demo/", "mary.png"));
+        user.setSalary(90000f);
         saveContext.saving(user);
         list.add(user);
         for (Step step : steps) {
@@ -197,6 +200,7 @@ public class DemoDataInitializer {
         user.setDepartment(departments.get(2));
         user.setJoiningDate(LocalDate.now().minusDays(2));
         user.setPicture(uploadPicture("com/company/onboarding/demo/", "linda.png"));
+        user.setSalary(100000f);
         saveContext.saving(user);
         list.add(user);
         for (Step step : steps) {
@@ -219,6 +223,7 @@ public class DemoDataInitializer {
         user.setDepartment(departments.get(2));
         user.setJoiningDate(LocalDate.now());
         user.setPicture(uploadPicture("com/company/onboarding/demo/", "susan.png"));
+        user.setSalary(55000f);
         saveContext.saving(user);
         list.add(user);
         for (Step step : steps) {
@@ -241,6 +246,7 @@ public class DemoDataInitializer {
         user.setDepartment(departments.get(2));
         user.setJoiningDate(LocalDate.now().minusDays(1));
         user.setPicture(uploadPicture("com/company/onboarding/demo/", "bob.png"));
+        user.setSalary(80000f);
         saveContext.saving(user);
         list.add(user);
         for (Step step : steps) {

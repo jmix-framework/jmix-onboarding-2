@@ -79,8 +79,19 @@ public class User implements JmixUserDetails, HasTimeZone {
     @Column(name = "PICTURE", length = 1024)
     private FileRef picture;
 
+    @Column(name = "SALARY")
+    private Float salary;
+
     @Transient
     protected Collection<? extends GrantedAuthority> authorities;
+
+    public Float getSalary() {
+        return salary;
+    }
+
+    public void setSalary(Float salary) {
+        this.salary = salary;
+    }
 
     public FileRef getPicture() {
         return picture;

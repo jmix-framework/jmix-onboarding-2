@@ -57,6 +57,7 @@
                            classNames="user-picture"/>
                 </hbox>
             </details>
+            <textField id="salaryField" property="salary"/>
         </formLayout>
         <hbox id="buttonsPanel" classNames="buttons-panel">
             <button id="generateButton" text="Generate"/>

@@ -69,6 +69,7 @@
                 <column property="onboardingStatus"/>
                 <column property="department"/>
                 <column property="joiningDate"/>
+                <column property="salary"/>
             </columns>
         </dataGrid>
         <hbox id="lookupActions" visible="false">

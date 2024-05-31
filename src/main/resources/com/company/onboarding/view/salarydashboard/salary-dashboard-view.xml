@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<view xmlns="http://jmix.io/schema/flowui/view"
+      xmlns:superset="http://jmix.io/schema/superset/ui"
+      title="msg://salaryDashboardView.title">
+    <layout>
+        <superset:dashboard id="dashboard"
+                            width="100%"
+                            height="100%"
+                            embeddedId="940f36ff-6c97-4a35-a4ff-4e4aeee3a9c7"/>
+    </layout>
+</view>
