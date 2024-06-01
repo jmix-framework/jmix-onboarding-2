@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <view xmlns="http://jmix.io/schema/flowui/view"
       xmlns:superset="http://jmix.io/schema/superset/ui"
-      title="msg://salaryDashboardView.title">
+      title="msg://salariesDashboardView.title">
     <layout>
         <superset:dashboard id="dashboard"
                             width="100%"
