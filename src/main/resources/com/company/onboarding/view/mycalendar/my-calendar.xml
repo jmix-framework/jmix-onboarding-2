@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<view xmlns="http://jmix.io/schema/flowui/view" xmlns:calendar="http://jmix.io/schema/fullcalendar/ui"
+      title="msg://myCalendar.title">
+    <data>
+        <collection id="meetingsDc" class="com.company.onboarding.entity.Meeting">
+            <loader id="meetingsDl" readOnly="true">
+                <query>
+                    <![CDATA[select e from Meeting e where e.user = :user]]>
+                </query>
+            </loader>
+            <fetchPlan extends="_base">
+                <property name="user" fetchPlan="_base"/>
+            </fetchPlan>
+        </collection>
+    </data>
+    <layout>
+        <hbox>
+            <button id="previousButton" icon="ANGLE_LEFT"/>
+            <button id="nextButton" icon="ANGLE_RIGHT"/>
+        </hbox>
+        <calendar:calendar id="calendar"
+                           initialView="TIME_GRID_WEEK"
+                           scrollTime="PT9h"
+                           height="100%"
+                           width="100%">
+            <calendar:eventProviders>
+                <calendar:containerEventProvider id="meetingsEventProvider"
+                                                 dataContainer="meetingsDc"
+                                                 title="name"
+                                                 endDateTime="endDate"
+                                                 startDateTime="startDate"/>
+            </calendar:eventProviders>
+        </calendar:calendar>
+    </layout>
+</view>

@@ -1,6 +1,7 @@
 package com.company.onboarding.view.myonboarding;
 
 
+import com.company.onboarding.entity.Meeting;
 import com.company.onboarding.entity.User;
 import com.company.onboarding.entity.UserStep;
 import com.company.onboarding.view.main.MainView;
@@ -20,7 +21,11 @@ import io.jmix.flowui.model.InstanceContainer;
 import io.jmix.flowui.view.*;
 import org.springframework.beans.factory.annotation.Autowired;
 
+import java.time.DayOfWeek;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
+import java.util.List;
 
 @Route(value = "MyOnboardingView", layout = MainView.class)
 @ViewController("MyOnboardingView")
@@ -115,5 +120,29 @@ public class MyOnboardingView extends StandardView {
     @Install(to = "userStepsDataGrid.dueDate", subject = "partNameGenerator")
     private String userStepsDataGridDueDatePartNameGenerator(final UserStep userStep) {
         return isOverdue(userStep) ? "overdue-step" : null;
+    }
+
+    @Subscribe(target = Target.DATA_CONTEXT)
+    public void onPreSave(final DataContext.PreSaveEvent event) {
+        List<UserStep> userSteps = userStepsDc.getItems().stream()
+                .filter(us -> us.getCompletedDate() == null)
+                .toList();
+        if (userSteps.isEmpty()) {
+            generateOnboardingResultsMeeting();
+        }
+    }
+
+    protected void generateOnboardingResultsMeeting() {
+        Meeting meeting = dataContext.create(Meeting.class);
+        meeting.setName("Results meeting");
+        meeting.setUser((User) currentAuthentication.getUser());
+
+        int inDays = LocalDate.now().getDayOfWeek() == DayOfWeek.FRIDAY ? 3 : 1;
+        LocalDateTime start = LocalDateTime.of(
+                LocalDate.now().plusDays(inDays),
+                LocalTime.of(9, 30));
+
+        meeting.setStartDate(start);
+        meeting.setEndDate(start.plusMinutes(30));
     }
 }
