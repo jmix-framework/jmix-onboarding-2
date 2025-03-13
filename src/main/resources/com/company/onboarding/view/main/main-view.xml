@@ -2,7 +2,7 @@
 <mainView xmlns="http://jmix.io/schema/flowui/main-view"
           title="msg://MainView.title">
     <actions>
-        <action id="logout" type="logout"/>
+        <action id="logoutAction" type="logout"/>
     </actions>
     <appLayout>
         <navigationBar>
@@ -17,8 +17,12 @@
         <drawerLayout>
             <section id="section" classNames="jmix-main-view-section">
                 <h2 id="applicationTitle"
-                    text="msg://applicationTitle.text"
-                    classNames="jmix-main-view-application-title"/>
+                    classNames="jmix-main-view-application-title">
+                    <anchor id="baseLink"
+                            href="."
+                            text="msg://applicationTitle.text"
+                            classNames="jmix-main-view-application-title-base-link"/>
+                </h2>
                 <nav id="navigation"
                      classNames="jmix-main-view-navigation"
                      ariaLabel="msg://navigation.ariaLabel">
@@ -27,10 +31,12 @@
                 <footer id="footer" classNames="jmix-main-view-footer">
                     <userIndicator id="userIndicator"/>
                     <button id="logoutButton"
-                            action="logout"
+                            action="logoutAction"
                             classNames="jmix-logout-button"/>
                 </footer>
             </section>
         </drawerLayout>
+        <initialLayout>
+        </initialLayout>
     </appLayout>
 </mainView>

@@ -23,8 +23,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import java.time.LocalDate;
 
 @Route(value = "MyOnboardingView", layout = MainView.class)
-@ViewController("MyOnboardingView")
-@ViewDescriptor("my-onboarding-view.xml")
+@ViewController(id = "MyOnboardingView")
+@ViewDescriptor(path = "my-onboarding-view.xml")
 public class MyOnboardingView extends StandardView {
 
     @Autowired

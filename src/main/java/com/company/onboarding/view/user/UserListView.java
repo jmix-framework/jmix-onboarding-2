@@ -14,8 +14,8 @@ import io.jmix.flowui.view.*;
 import org.springframework.beans.factory.annotation.Autowired;
 
 @Route(value = "users", layout = MainView.class)
-@ViewController("User.list")
-@ViewDescriptor("user-list-view.xml")
+@ViewController(id = "User.list")
+@ViewDescriptor(path = "user-list-view.xml")
 @LookupComponent("usersDataGrid")
 @DialogMode(width = "50em", height = "37.5em")
 public class UserListView extends StandardListView<User> {
