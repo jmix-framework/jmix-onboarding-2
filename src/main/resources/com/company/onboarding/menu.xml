@@ -2,9 +2,25 @@
 <menu-config xmlns="http://jmix.io/schema/flowui/menu">
 
     <menu opened="true" id="application" title="msg://com.company.onboarding/menu.application.title">
-        <item view="MyOnboardingView" title="msg://com.company.onboarding.view.myonboarding/myOnboardingView.title"/>
-        <item view="User.list" title="msg://com.company.onboarding.view.user/UserListView.title"/>
-        <item view="Step.list" title="msg://com.company.onboarding.view.step/stepListView.title"/>
-        <item view="Department.list" title="msg://com.company.onboarding.view.department/departmentListView.title"/>
+        <item view="MyOnboardingView" title="msg://com.company.onboarding.view.myonboarding/myOnboardingView.title">
+            <icon>
+                <svgIcon resource="icons/handshake.svg"/>
+            </icon>
+        </item>
+        <item view="User.list" title="msg://com.company.onboarding.view.user/UserListView.title">
+            <icon>
+                <svgIcon resource="icons/users.svg"/>
+            </icon>
+        </item>
+        <item view="Step.list" title="msg://com.company.onboarding.view.step/stepListView.title">
+            <icon>
+                <svgIcon resource="icons/footprints.svg"/>
+            </icon>
+        </item>
+        <item view="Department.list" title="msg://com.company.onboarding.view.department/departmentListView.title">
+            <icon>
+                <svgIcon resource="icons/landmark.svg"/>
+            </icon>
+        </item>
     </menu>
 </menu-config>

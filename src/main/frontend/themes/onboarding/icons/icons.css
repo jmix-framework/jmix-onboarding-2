@@ -1,0 +1,105 @@
+@import url('./material-symbols/material-symbols.css');
+
+html {
+    --ms-font-icon-check: "\e5ca";
+    --ms-font-icon-block: "\f08c";
+    --ms-font-icon-close: "\e5cd";
+    --ms-font-icon-add: "\e145";
+    --ms-font-icon-edit: "\f097";
+    --ms-font-icon-delete: "\e92e";
+    --ms-font-icon-visibility: "\e8f4";
+    --ms-font-icon-refresh: "\e5d5";
+    --ms-font-icon-archive: "\e149";
+    --ms-font-icon-ellipsis-more-horiz: "\e5d3";
+    --ms-font-icon-zoom-in: "\e8ff";
+    --ms-font-icon-logout: "\e9ba";
+    --ms-font-icon-group: "\ea21";
+    --ms-font-icon-download: "\f090";
+    --ms-font-icon-upload: "\f09b";
+    --ms-font-icon-shield-person: "\f650";
+
+    --jmix-font-icon-ok: var(--ms-font-icon-check);
+    --jmix-font-icon-cancel: var(--ms-font-icon-block);
+    --jmix-font-icon-yes: var(--ms-font-icon-check);
+    --jmix-font-icon-no: var(--ms-font-icon-block);
+
+    --jmix-font-icon-dialog-ok: var(--ms-font-icon-check);
+    --jmix-font-icon-dialog-cancel: var(--ms-font-icon-block);
+    --jmix-font-icon-dialog-yes: var(--ms-font-icon-check);
+    --jmix-font-icon-dialog-no: var(--ms-font-icon-block);
+    --jmix-font-icon-dialog-close: var(--ms-font-icon-close);
+
+    --jmix-font-icon-create-action: var(--ms-font-icon-add);
+    --jmix-font-icon-edit-action: var(--ms-font-icon-edit);
+    --jmix-font-icon-remove-action: var(--ms-font-icon-delete);
+    --jmix-font-icon-add-action: var(--ms-font-icon-add);
+    --jmix-font-icon-exclude-action: var(--ms-font-icon-close);
+    --jmix-font-icon-read-action: var(--ms-font-icon-visibility);
+    --jmix-font-icon-refresh-action: var(--ms-font-icon-refresh);
+
+    --jmix-font-icon-view-close-action: var(--ms-font-icon-block);
+    --jmix-font-icon-detail-save-close-action: var(--ms-font-icon-check);
+    --jmix-font-icon-detail-save-action: var(--ms-font-icon-archive);
+    --jmix-font-icon-detail-close-action: var(--ms-font-icon-block);
+    --jmix-font-icon-detail-discard-action: var(--ms-font-icon-block);
+    --jmix-font-icon-detail-enable-editing-action: var(--ms-font-icon-edit);
+    --jmix-font-icon-lookup-select-action: var(--ms-font-icon-check);
+    --jmix-font-icon-lookup-discard-action: var(--ms-font-icon-block);
+
+    --jmix-font-icon-entity-lookup-action: var(--ms-font-icon-ellipsis-more-horiz);
+    --jmix-font-icon-entity-clear-action: var(--ms-font-icon-close);
+    --jmix-font-icon-entity-open-action: var(--ms-font-icon-zoom-in);
+
+    --jmix-font-icon-value-clear-action: var(--ms-font-icon-close);
+
+    --jmix-font-icon-multi-value-select-action: var(--ms-font-icon-ellipsis-more-horiz);
+
+    --jmix-font-icon-date-interval-action: var(--ms-font-icon-ellipsis-more-horiz);
+
+    --jmix-font-icon-logout-action: var(--ms-font-icon-logout);
+
+    --jmix-font-icon-assign-to-users-action: var(--ms-font-icon-group);
+
+    --jmix-font-icon-upload: var(--ms-font-icon-upload);
+    --jmix-font-icon-download: var(--ms-font-icon-download);
+
+    --jmix-font-icon-show-role-assignments-action: var(--ms-font-icon-shield-person);
+}
+
+.jmix-font-icon-ok,
+.jmix-font-icon-cancel,
+.jmix-font-icon-yes,
+.jmix-font-icon-no,
+.jmix-font-icon-dialog-ok,
+.jmix-font-icon-dialog-cancel,
+.jmix-font-icon-dialog-yes,
+.jmix-font-icon-dialog-no,
+.jmix-font-icon-dialog-close,
+.jmix-font-icon-create-action,
+.jmix-font-icon-edit-action,
+.jmix-font-icon-remove-action,
+.jmix-font-icon-add-action,
+.jmix-font-icon-exclude-action,
+.jmix-font-icon-read-action,
+.jmix-font-icon-refresh-action,
+.jmix-font-icon-view-close-action,
+.jmix-font-icon-detail-save-close-action,
+.jmix-font-icon-detail-save-action,
+.jmix-font-icon-detail-close-action,
+.jmix-font-icon-detail-discard-action,
+.jmix-font-icon-detail-enable-editing-action,
+.jmix-font-icon-lookup-select-action,
+.jmix-font-icon-lookup-discard-action,
+.jmix-font-icon-entity-lookup-action,
+.jmix-font-icon-entity-clear-action,
+.jmix-font-icon-entity-open-action,
+.jmix-font-icon-value-clear-action,
+.jmix-font-icon-multi-value-select-action,
+.jmix-font-icon-date-interval-action,
+.jmix-font-icon-logout-action,
+.jmix-font-icon-assign-to-users-action,
+.jmix-font-icon-upload,
+.jmix-font-icon-download,
+.jmix-font-icon-show-role-assignments-action {
+    --jmix-font-icon-font-family: 'Material-Symbols';
+}
