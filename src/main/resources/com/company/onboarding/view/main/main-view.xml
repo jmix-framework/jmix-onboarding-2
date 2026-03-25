@@ -37,6 +37,2163 @@
             </section>
         </drawerLayout>
         <initialLayout>
+            <gridLayout width="100%">
+                <button icon="OK">
+                    <tooltip text="OK"/>
+                </button>
+                <button icon="CANCEL">
+                    <tooltip text="CANCEL"/>
+                </button>
+                <button icon="YES">
+                    <tooltip text="YES"/>
+                </button>
+                <button icon="NO">
+                    <tooltip text="NO"/>
+                </button>
+
+                <button icon="DIALOG_OK">
+                    <tooltip text="DIALOG_OK"/>
+                </button>
+                <button icon="DIALOG_CANCEL">
+                    <tooltip text="DIALOG_CANCEL"/>
+                </button>
+                <button icon="DIALOG_YES">
+                    <tooltip text="DIALOG_YES"/>
+                </button>
+                <button icon="DIALOG_NO">
+                    <tooltip text="DIALOG_NO"/>
+                </button>
+                <button icon="DIALOG_CLOSE">
+                    <tooltip text="DIALOG_CLOSE"/>
+                </button>
+
+                <button icon="CREATE_ACTION">
+                    <tooltip text="CREATE_ACTION"/>
+                </button>
+                <button icon="EDIT_ACTION">
+                    <tooltip text="EDIT_ACTION"/>
+                </button>
+                <button icon="REMOVE_ACTION">
+                    <tooltip text="REMOVE_ACTION"/>
+                </button>
+                <button icon="ADD_ACTION">
+                    <tooltip text="ADD_ACTION"/>
+                </button>
+                <button icon="EXCLUDE_ACTION">
+                    <tooltip text="EXCLUDE_ACTION"/>
+                </button>
+                <button icon="READ_ACTION">
+                    <tooltip text="READ_ACTION"/>
+                </button>
+                <button icon="REFRESH_ACTION">
+                    <tooltip text="REFRESH_ACTION"/>
+                </button>
+
+                <button icon="VIEW_CLOSE_ACTION">
+                    <tooltip text="VIEW_CLOSE_ACTION"/>
+                </button>
+                <button icon="DETAIL_SAVE_CLOSE_ACTION">
+                    <tooltip text="DETAIL_SAVE_CLOSE_ACTION"/>
+                </button>
+                <button icon="DETAIL_SAVE_ACTION">
+                    <tooltip text="DETAIL_SAVE_ACTION"/>
+                </button>
+                <button icon="DETAIL_CLOSE_ACTION">
+                    <tooltip text="DETAIL_CLOSE_ACTION"/>
+                </button>
+                <button icon="DETAIL_DISCARD_ACTION">
+                    <tooltip text="DETAIL_DISCARD_ACTION"/>
+                </button>
+                <button icon="DETAIL_ENABLE_EDITING_ACTION">
+                    <tooltip text="DETAIL_ENABLE_EDITING_ACTION"/>
+                </button>
+                <button icon="LOOKUP_SELECT_ACTION">
+                    <tooltip text="LOOKUP_SELECT_ACTION"/>
+                </button>
+                <button icon="LOOKUP_DISCARD_ACTION">
+                    <tooltip text="LOOKUP_DISCARD_ACTION"/>
+                </button>
+
+                <button icon="ENTITY_LOOKUP_ACTION">
+                    <tooltip text="ENTITY_LOOKUP_ACTION"/>
+                </button>
+                <button icon="ENTITY_CLEAR_ACTION">
+                    <tooltip text="ENTITY_CLEAR_ACTION"/>
+                </button>
+                <button icon="ENTITY_OPEN_ACTION">
+                    <tooltip text="ENTITY_OPEN_ACTION"/>
+                </button>
+
+                <button icon="VALUE_CLEAR_ACTION">
+                    <tooltip text="VALUE_CLEAR_ACTION"/>
+                </button>
+
+                <button icon="MULTI_VALUE_SELECT_ACTION">
+                    <tooltip text="MULTI_VALUE_SELECT_ACTION"/>
+                </button>
+
+                <button icon="DATE_INTERVAL_ACTION">
+                    <tooltip text="DATE_INTERVAL_ACTION"/>
+                </button>
+
+                <button icon="LOGOUT_ACTION">
+                    <tooltip text="LOGOUT_ACTION"/>
+                </button>
+
+                <button icon="BULK_EDIT_ACTION">
+                    <tooltip text="BULK_EDIT_ACTION"/>
+                </button>
+
+                <button icon="JSON_EXPORT_ACTION">
+                    <tooltip text="JSON_EXPORT_ACTION"/>
+                </button>
+                <button icon="EXCEL_EXPORT_ACTION">
+                    <tooltip text="EXCEL_EXPORT_ACTION"/>
+                </button>
+
+                <button icon="SHOW_ROLE_ASSIGNMENTS_ACTION">
+                    <tooltip text="SHOW_ROLE_ASSIGNMENTS_ACTION"/>
+                </button>
+                <button icon="ASSIGN_TO_USERS_ACTION">
+                    <tooltip text="ASSIGN_TO_USERS_ACTION"/>
+                </button>
+
+                <button icon="RUN_REPORT_ACTION">
+                    <tooltip text="RUN_REPORT_ACTION"/>
+                </button>
+                <button icon="RUN_SINGLE_ENTITY_REPORT_ACTION">
+                    <tooltip text="RUN_SINGLE_ENTITY_REPORT_ACTION"/>
+                </button>
+                <button icon="RUN_LIST_ENTITY_REPORT_ACTION">
+                    <tooltip text="RUN_LIST_ENTITY_REPORT_ACTION"/>
+                </button>
+                <button icon="SHOW_EXECUTION_REPORT_HISTORY_ACTION">
+                    <tooltip text="SHOW_EXECUTION_REPORT_HISTORY_ACTION"/>
+                </button>
+
+                <button icon="DAYS_OF_WEEK_EDIT_ACTION">
+                    <tooltip text="DAYS_OF_WEEK_EDIT_ACTION"/>
+                </button>
+
+                <button icon="USER_MENU_THEME_SWITCH_ACTION_SYSTEM_THEME">
+                    <tooltip text="USER_MENU_THEME_SWITCH_ACTION_SYSTEM_THEME"/>
+                </button>
+                <button icon="USER_MENU_THEME_SWITCH_ACTION_LIGHT_THEME">
+                    <tooltip text="USER_MENU_THEME_SWITCH_ACTION_LIGHT_THEME"/>
+                </button>
+                <button icon="USER_MENU_THEME_SWITCH_ACTION_DARK_THEME">
+                    <tooltip text="USER_MENU_THEME_SWITCH_ACTION_DARK_THEME"/>
+                </button>
+
+                <button icon="USER_MENU_SUBSTITUTE_USER_ACTION">
+                    <tooltip text="USER_MENU_SUBSTITUTE_USER_ACTION"/>
+                </button>
+
+                <button icon="GENERIC_FILTER_SAVE_ACTION">
+                    <tooltip text="GENERIC_FILTER_SAVE_ACTION"/>
+                </button>
+                <button icon="GENERIC_FILTER_EDIT_ACTION">
+                    <tooltip text="GENERIC_FILTER_EDIT_ACTION"/>
+                </button>
+                <button icon="GENERIC_FILTER_COPY_ACTION">
+                    <tooltip text="GENERIC_FILTER_COPY_ACTION"/>
+                </button>
+                <button icon="GENERIC_FILTER_REMOVE_ACTION">
+                    <tooltip text="GENERIC_FILTER_REMOVE_ACTION"/>
+                </button>
+                <button icon="GENERIC_FILTER_CLEAR_VALUES_ACTION">
+                    <tooltip text="GENERIC_FILTER_CLEAR_VALUES_ACTION"/>
+                </button>
+                <button icon="GENERIC_FILTER_MAKE_DEFAULT_ACTION">
+                    <tooltip text="GENERIC_FILTER_MAKE_DEFAULT_ACTION"/>
+                </button>
+                <button icon="GENERIC_FILTER_ADD_CONDITION_ACTION">
+                    <tooltip text="GENERIC_FILTER_ADD_CONDITION_ACTION"/>
+                </button>
+
+                <button icon="INTERVAL_FIELD_HELP">
+                    <tooltip text="INTERVAL_FIELD_HELP"/>
+                </button>
+
+                <button icon="COMBO_BUTTON_DROPDOWN">
+                    <tooltip text="COMBO_BUTTON_DROPDOWN"/>
+                </button>
+
+                <button icon="PAGINATION_FIRST_PAGE">
+                    <tooltip text="PAGINATION_FIRST_PAGE"/>
+                </button>
+                <button icon="PAGINATION_PREVIOUS_PAGE">
+                    <tooltip text="PAGINATION_PREVIOUS_PAGE"/>
+                </button>
+                <button icon="PAGINATION_NEXT_PAGE">
+                    <tooltip text="PAGINATION_NEXT_PAGE"/>
+                </button>
+                <button icon="PAGINATION_LAST_PAGE">
+                    <tooltip text="PAGINATION_LAST_PAGE"/>
+                </button>
+
+                <button icon="TWIN_COLUMN_SELECT_ALL">
+                    <tooltip text="TWIN_COLUMN_SELECT_ALL"/>
+                </button>
+                <button icon="TWIN_COLUMN_DESELECT_ALL">
+                    <tooltip text="TWIN_COLUMN_DESELECT_ALL"/>
+                </button>
+                <button icon="TWIN_COLUMN_SELECT">
+                    <tooltip text="TWIN_COLUMN_SELECT"/>
+                </button>
+                <button icon="TWIN_COLUMN_DESELECT">
+                    <tooltip text="TWIN_COLUMN_DESELECT"/>
+                </button>
+
+                <button icon="GENERIC_FILTER_SETTINGS">
+                    <tooltip text="GENERIC_FILTER_SETTINGS"/>
+                </button>
+                <button icon="GENERIC_FILTER_CONDITION_REMOVE">
+                    <tooltip text="GENERIC_FILTER_CONDITION_REMOVE"/>
+                </button>
+
+                <button icon="DATA_GRID_HEADER_FILTER">
+                    <tooltip text="DATA_GRID_HEADER_FILTER"/>
+                </button>
+                <button icon="DATA_GRID_HEADER_FILTER_APPLY">
+                    <tooltip text="DATA_GRID_HEADER_FILTER_APPLY"/>
+                </button>
+                <button icon="DATA_GRID_HEADER_FILTER_CANCEL">
+                    <tooltip text="DATA_GRID_HEADER_FILTER_CANCEL"/>
+                </button>
+                <button icon="DATA_GRID_HEADER_FILTER_CLEAR">
+                    <tooltip text="DATA_GRID_HEADER_FILTER_CLEAR"/>
+                </button>
+
+                <button icon="SEARCH_FIELD_SEARCH">
+                    <tooltip text="SEARCH_FIELD_SEARCH"/>
+                </button>
+                <button icon="SEARCH_FIELD_SETTINGS">
+                    <tooltip text="SEARCH_FIELD_SETTINGS"/>
+                </button>
+
+                <button icon="PHOTO">
+                    <tooltip text="PHOTO"/>
+                </button>
+                <button icon="REDO">
+                    <tooltip text="REDO"/>
+                </button>
+                <button icon="UNDO">
+                    <tooltip text="UNDO"/>
+                </button>
+
+                <button icon="ABACUS">
+                    <tooltip text="ABACUS"/>
+                </button>
+                <button icon="ABSOLUTE_POSITION">
+                    <tooltip text="ABSOLUTE_POSITION"/>
+                </button>
+                <button icon="ACADEMY_CAP">
+                    <tooltip text="ACADEMY_CAP"/>
+                </button>
+                <button icon="ACCESSIBILITY">
+                    <tooltip text="ACCESSIBILITY"/>
+                </button>
+                <button icon="ACCORDION_MENU">
+                    <tooltip text="ACCORDION_MENU"/>
+                </button>
+                <button icon="ADD_DOCK">
+                    <tooltip text="ADD_DOCK"/>
+                </button>
+                <button icon="ADJUST">
+                    <tooltip text="ADJUST"/>
+                </button>
+                <button icon="ADOBE_FLASH">
+                    <tooltip text="ADOBE_FLASH"/>
+                </button>
+                <button icon="AIRPLANE">
+                    <tooltip text="AIRPLANE"/>
+                </button>
+                <button icon="ALARM">
+                    <tooltip text="ALARM"/>
+                </button>
+                <button icon="ALARM">
+                    <tooltip text="ALARM"/>
+                </button>
+                <button icon="ALIGN_CENTER">
+                    <tooltip text="ALIGN_CENTER"/>
+                </button>
+                <button icon="ALIGN_JUSTIFY">
+                    <tooltip text="ALIGN_JUSTIFY"/>
+                </button>
+                <button icon="ALIGN_LEFT">
+                    <tooltip text="ALIGN_LEFT"/>
+                </button>
+                <button icon="ALIGN_RIGHT">
+                    <tooltip text="ALIGN_RIGHT"/>
+                </button>
+                <button icon="ALT_A">
+                    <tooltip text="ALT_A"/>
+                </button>
+                <button icon="ALT">
+                    <tooltip text="ALT"/>
+                </button>
+                <button icon="AMBULANCE">
+                    <tooltip text="AMBULANCE"/>
+                </button>
+                <button icon="ANCHOR">
+                    <tooltip text="ANCHOR"/>
+                </button>
+                <button icon="ANGLE_DOUBLE_DOWN">
+                    <tooltip text="ANGLE_DOUBLE_DOWN"/>
+                </button>
+                <button icon="ANGLE_DOUBLE_LEFT">
+                    <tooltip text="ANGLE_DOUBLE_LEFT"/>
+                </button>
+                <button icon="ANGLE_DOUBLE_RIGHT">
+                    <tooltip text="ANGLE_DOUBLE_RIGHT"/>
+                </button>
+                <button icon="ANGLE_DOUBLE_UP">
+                    <tooltip text="ANGLE_DOUBLE_UP"/>
+                </button>
+                <button icon="ANGLE_DOWN">
+                    <tooltip text="ANGLE_DOWN"/>
+                </button>
+                <button icon="ANGLE_LEFT">
+                    <tooltip text="ANGLE_LEFT"/>
+                </button>
+                <button icon="ANGLE_RIGHT">
+                    <tooltip text="ANGLE_RIGHT"/>
+                </button>
+                <button icon="ANGLE_UP">
+                    <tooltip text="ANGLE_UP"/>
+                </button>
+                <button icon="ARCHIVE">
+                    <tooltip text="ARCHIVE"/>
+                </button>
+                <button icon="ARCHIVES">
+                    <tooltip text="ARCHIVES"/>
+                </button>
+                <button icon="AREA_SELECT">
+                    <tooltip text="AREA_SELECT"/>
+                </button>
+                <button icon="ARROW_BACKWARD">
+                    <tooltip text="ARROW_BACKWARD"/>
+                </button>
+                <button icon="ARROW_CIRCLE_DOWN_O">
+                    <tooltip text="ARROW_CIRCLE_DOWN_O"/>
+                </button>
+                <button icon="ARROW_CIRCLE_DOWN">
+                    <tooltip text="ARROW_CIRCLE_DOWN"/>
+                </button>
+                <button icon="ARROW_CIRCLE_LEFT_O">
+                    <tooltip text="ARROW_CIRCLE_LEFT_O"/>
+                </button>
+                <button icon="ARROW_CIRCLE_LEFT">
+                    <tooltip text="ARROW_CIRCLE_LEFT"/>
+                </button>
+                <button icon="ARROW_CIRCLE_RIGHT_O">
+                    <tooltip text="ARROW_CIRCLE_RIGHT_O"/>
+                </button>
+                <button icon="ARROW_CIRCLE_RIGHT">
+                    <tooltip text="ARROW_CIRCLE_RIGHT"/>
+                </button>
+                <button icon="ARROW_CIRCLE_UP_O">
+                    <tooltip text="ARROW_CIRCLE_UP_O"/>
+                </button>
+                <button icon="ARROW_CIRCLE_UP">
+                    <tooltip text="ARROW_CIRCLE_UP"/>
+                </button>
+                <button icon="ARROW_DOWN">
+                    <tooltip text="ARROW_DOWN"/>
+                </button>
+                <button icon="ARROW_FORWARD">
+                    <tooltip text="ARROW_FORWARD"/>
+                </button>
+                <button icon="ARROW_LEFT">
+                    <tooltip text="ARROW_LEFT"/>
+                </button>
+                <button icon="ARROW_LONG_DOWN">
+                    <tooltip text="ARROW_LONG_DOWN"/>
+                </button>
+                <button icon="ARROW_LONG_LEFT">
+                    <tooltip text="ARROW_LONG_LEFT"/>
+                </button>
+                <button icon="ARROW_RIGHT">
+                    <tooltip text="ARROW_RIGHT"/>
+                </button>
+                <button icon="ARROW_UP">
+                    <tooltip text="ARROW_UP"/>
+                </button>
+                <button icon="ARROWS_CROSS">
+                    <tooltip text="ARROWS_CROSS"/>
+                </button>
+                <button icon="ARROWS_LONG_H">
+                    <tooltip text="ARROWS_LONG_H"/>
+                </button>
+                <button icon="ARROWS_LONG_RIGHT">
+                    <tooltip text="ARROWS_LONG_RIGHT"/>
+                </button>
+                <button icon="ARROWS_LONG_UP">
+                    <tooltip text="ARROWS_LONG_UP"/>
+                </button>
+                <button icon="ARROWS_LONG_V">
+                    <tooltip text="ARROWS_LONG_V"/>
+                </button>
+                <button icon="ARROWS">
+                    <tooltip text="ARROWS"/>
+                </button>
+                <button icon="ASTERISK">
+                    <tooltip text="ASTERISK"/>
+                </button>
+                <button icon="AT">
+                    <tooltip text="AT"/>
+                </button>
+                <button icon="AUTOMATION">
+                    <tooltip text="AUTOMATION"/>
+                </button>
+                <button icon="BACKSPACE_A">
+                    <tooltip text="BACKSPACE_A"/>
+                </button>
+                <button icon="BACKSPACE">
+                    <tooltip text="BACKSPACE"/>
+                </button>
+                <button icon="BACKWARDS">
+                    <tooltip text="BACKWARDS"/>
+                </button>
+                <button icon="BAN">
+                    <tooltip text="BAN"/>
+                </button>
+                <button icon="BAR_CHART_H">
+                    <tooltip text="BAR_CHART_H"/>
+                </button>
+                <button icon="BAR_CHART_V">
+                    <tooltip text="BAR_CHART_V"/>
+                </button>
+                <button icon="BAR_CHART">
+                    <tooltip text="BAR_CHART"/>
+                </button>
+                <button icon="BARCODE">
+                    <tooltip text="BARCODE"/>
+                </button>
+                <button icon="BED">
+                    <tooltip text="BED"/>
+                </button>
+                <button icon="BELL_O">
+                    <tooltip text="BELL_O"/>
+                </button>
+                <button icon="BELL_SLASH_O">
+                    <tooltip text="BELL_SLASH_O"/>
+                </button>
+                <button icon="BELL_SLASH">
+                    <tooltip text="BELL_SLASH"/>
+                </button>
+                <button icon="BELL">
+                    <tooltip text="BELL"/>
+                </button>
+                <button icon="BOAT">
+                    <tooltip text="BOAT"/>
+                </button>
+                <button icon="BOLD">
+                    <tooltip text="BOLD"/>
+                </button>
+                <button icon="BOLT">
+                    <tooltip text="BOLT"/>
+                </button>
+                <button icon="BOMB">
+                    <tooltip text="BOMB"/>
+                </button>
+                <button icon="BOOK_DOLLAR">
+                    <tooltip text="BOOK_DOLLAR"/>
+                </button>
+                <button icon="BOOK_PERCENT">
+                    <tooltip text="BOOK_PERCENT"/>
+                </button>
+                <button icon="BOOK">
+                    <tooltip text="BOOK"/>
+                </button>
+                <button icon="BOOKMARK_O">
+                    <tooltip text="BOOKMARK_O"/>
+                </button>
+                <button icon="BOOKMARK">
+                    <tooltip text="BOOKMARK"/>
+                </button>
+                <button icon="BRIEFCASE">
+                    <tooltip text="BRIEFCASE"/>
+                </button>
+                <button icon="BROWSER">
+                    <tooltip text="BROWSER"/>
+                </button>
+                <button icon="BUG_O">
+                    <tooltip text="BUG_O"/>
+                </button>
+                <button icon="BUG">
+                    <tooltip text="BUG"/>
+                </button>
+                <button icon="BUILDING_O">
+                    <tooltip text="BUILDING_O"/>
+                </button>
+                <button icon="BUILDING">
+                    <tooltip text="BUILDING"/>
+                </button>
+                <button icon="BULLETS">
+                    <tooltip text="BULLETS"/>
+                </button>
+                <button icon="BULLSEYE">
+                    <tooltip text="BULLSEYE"/>
+                </button>
+                <button icon="BUS">
+                    <tooltip text="BUS"/>
+                </button>
+                <button icon="BUTTON">
+                    <tooltip text="BUTTON"/>
+                </button>
+                <button icon="CALC_BOOK">
+                    <tooltip text="CALC_BOOK"/>
+                </button>
+                <button icon="CALC">
+                    <tooltip text="CALC"/>
+                </button>
+                <button icon="CALENDAR_BRIEFCASE">
+                    <tooltip text="CALENDAR_BRIEFCASE"/>
+                </button>
+                <button icon="CALENDAR_CLOCK">
+                    <tooltip text="CALENDAR_CLOCK"/>
+                </button>
+                <button icon="CALENDAR_ENVELOPE">
+                    <tooltip text="CALENDAR_ENVELOPE"/>
+                </button>
+                <button icon="CALENDAR_O">
+                    <tooltip text="CALENDAR_O"/>
+                </button>
+                <button icon="CALENDAR_USER">
+                    <tooltip text="CALENDAR_USER"/>
+                </button>
+                <button icon="CALENDAR">
+                    <tooltip text="CALENDAR"/>
+                </button>
+                <button icon="CAMERA">
+                    <tooltip text="CAMERA"/>
+                </button>
+                <button icon="CAR">
+                    <tooltip text="CAR"/>
+                </button>
+                <button icon="CARET_DOWN">
+                    <tooltip text="CARET_DOWN"/>
+                </button>
+                <button icon="CARET_LEFT">
+                    <tooltip text="CARET_LEFT"/>
+                </button>
+                <button icon="CARET_RIGHT">
+                    <tooltip text="CARET_RIGHT"/>
+                </button>
+                <button icon="CARET_SQUARE_DOWN_O">
+                    <tooltip text="CARET_SQUARE_DOWN_O"/>
+                </button>
+                <button icon="CARET_SQUARE_LEFT_O">
+                    <tooltip text="CARET_SQUARE_LEFT_O"/>
+                </button>
+                <button icon="CARET_SQUARE_RIGHT_O">
+                    <tooltip text="CARET_SQUARE_RIGHT_O"/>
+                </button>
+                <button icon="CARET_SQUARE_UP_O">
+                    <tooltip text="CARET_SQUARE_UP_O"/>
+                </button>
+                <button icon="CARET_UP">
+                    <tooltip text="CARET_UP"/>
+                </button>
+                <button icon="CART_O">
+                    <tooltip text="CART_O"/>
+                </button>
+                <button icon="CART">
+                    <tooltip text="CART"/>
+                </button>
+                <button icon="CASH">
+                    <tooltip text="CASH"/>
+                </button>
+                <button icon="CHART_3D">
+                    <tooltip text="CHART_3D"/>
+                </button>
+                <button icon="CHART_GRID">
+                    <tooltip text="CHART_GRID"/>
+                </button>
+                <button icon="CHART_LINE">
+                    <tooltip text="CHART_LINE"/>
+                </button>
+                <button icon="CHART_TIMELINE">
+                    <tooltip text="CHART_TIMELINE"/>
+                </button>
+                <button icon="CHART">
+                    <tooltip text="CHART"/>
+                </button>
+                <button icon="CHAT">
+                    <tooltip text="CHAT"/>
+                </button>
+                <button icon="CHECK_CIRCLE_O">
+                    <tooltip text="CHECK_CIRCLE_O"/>
+                </button>
+                <button icon="CHECK_CIRCLE">
+                    <tooltip text="CHECK_CIRCLE"/>
+                </button>
+                <button icon="CHECK_SQUARE_O">
+                    <tooltip text="CHECK_SQUARE_O"/>
+                </button>
+                <button icon="CHECK_SQUARE">
+                    <tooltip text="CHECK_SQUARE"/>
+                </button>
+                <button icon="CHECK">
+                    <tooltip text="CHECK"/>
+                </button>
+                <button icon="CHEVRON_CIRCLE_DOWN_O">
+                    <tooltip text="CHEVRON_CIRCLE_DOWN_O"/>
+                </button>
+                <button icon="CHEVRON_CIRCLE_DOWN">
+                    <tooltip text="CHEVRON_CIRCLE_DOWN"/>
+                </button>
+                <button icon="CHEVRON_CIRCLE_LEFT_O">
+                    <tooltip text="CHEVRON_CIRCLE_LEFT_O"/>
+                </button>
+                <button icon="CHEVRON_CIRCLE_LEFT">
+                    <tooltip text="CHEVRON_CIRCLE_LEFT"/>
+                </button>
+                <button icon="CHEVRON_CIRCLE_RIGHT_O">
+                    <tooltip text="CHEVRON_CIRCLE_RIGHT_O"/>
+                </button>
+                <button icon="CHEVRON_CIRCLE_RIGHT">
+                    <tooltip text="CHEVRON_CIRCLE_RIGHT"/>
+                </button>
+                <button icon="CHEVRON_CIRCLE_UP_O">
+                    <tooltip text="CHEVRON_CIRCLE_UP_O"/>
+                </button>
+                <button icon="CHEVRON_CIRCLE_UP">
+                    <tooltip text="CHEVRON_CIRCLE_UP"/>
+                </button>
+                <button icon="CHEVRON_DOWN_SMALL">
+                    <tooltip text="CHEVRON_DOWN_SMALL"/>
+                </button>
+                <button icon="CHEVRON_DOWN">
+                    <tooltip text="CHEVRON_DOWN"/>
+                </button>
+                <button icon="CHEVRON_LEFT_SMALL">
+                    <tooltip text="CHEVRON_LEFT_SMALL"/>
+                </button>
+                <button icon="CHEVRON_LEFT">
+                    <tooltip text="CHEVRON_LEFT"/>
+                </button>
+                <button icon="CHEVRON_RIGHT_SMALL">
+                    <tooltip text="CHEVRON_RIGHT_SMALL"/>
+                </button>
+                <button icon="CHEVRON_RIGHT">
+                    <tooltip text="CHEVRON_RIGHT"/>
+                </button>
+                <button icon="CHEVRON_UP_SMALL">
+                    <tooltip text="CHEVRON_UP_SMALL"/>
+                </button>
+                <button icon="CHEVRON_UP">
+                    <tooltip text="CHEVRON_UP"/>
+                </button>
+                <button icon="CHILD">
+                    <tooltip text="CHILD"/>
+                </button>
+                <button icon="CIRCLE_THIN">
+                    <tooltip text="CIRCLE_THIN"/>
+                </button>
+                <button icon="CIRCLE">
+                    <tooltip text="CIRCLE"/>
+                </button>
+                <button icon="CLIPBOARD_CHECK">
+                    <tooltip text="CLIPBOARD_CHECK"/>
+                </button>
+                <button icon="CLIPBOARD_CROSS">
+                    <tooltip text="CLIPBOARD_CROSS"/>
+                </button>
+                <button icon="CLIPBOARD_HEART">
+                    <tooltip text="CLIPBOARD_HEART"/>
+                </button>
+                <button icon="CLIPBOARD_PULSE">
+                    <tooltip text="CLIPBOARD_PULSE"/>
+                </button>
+                <button icon="CLIPBOARD_TEXT">
+                    <tooltip text="CLIPBOARD_TEXT"/>
+                </button>
+                <button icon="CLIPBOARD_USER">
+                    <tooltip text="CLIPBOARD_USER"/>
+                </button>
+                <button icon="CLIPBOARD">
+                    <tooltip text="CLIPBOARD"/>
+                </button>
+                <button icon="CLOCK">
+                    <tooltip text="CLOCK"/>
+                </button>
+                <button icon="CLOSE_BIG">
+                    <tooltip text="CLOSE_BIG"/>
+                </button>
+                <button icon="CLOSE_CIRCLE_O">
+                    <tooltip text="CLOSE_CIRCLE_O"/>
+                </button>
+                <button icon="CLOSE_CIRCLE">
+                    <tooltip text="CLOSE_CIRCLE"/>
+                </button>
+                <button icon="CLOSE_SMALL">
+                    <tooltip text="CLOSE_SMALL"/>
+                </button>
+                <button icon="CLOSE">
+                    <tooltip text="CLOSE"/>
+                </button>
+                <button icon="CLOUD_DOWNLOAD_O">
+                    <tooltip text="CLOUD_DOWNLOAD_O"/>
+                </button>
+                <button icon="CLOUD_DOWNLOAD">
+                    <tooltip text="CLOUD_DOWNLOAD"/>
+                </button>
+                <button icon="CLOUD_O">
+                    <tooltip text="CLOUD_O"/>
+                </button>
+                <button icon="CLOUD_UPLOAD_O">
+                    <tooltip text="CLOUD_UPLOAD_O"/>
+                </button>
+                <button icon="CLOUD_UPLOAD">
+                    <tooltip text="CLOUD_UPLOAD"/>
+                </button>
+                <button icon="CLOUD">
+                    <tooltip text="CLOUD"/>
+                </button>
+                <button icon="CLUSTER">
+                    <tooltip text="CLUSTER"/>
+                </button>
+                <button icon="CODE">
+                    <tooltip text="CODE"/>
+                </button>
+                <button icon="COFFEE">
+                    <tooltip text="COFFEE"/>
+                </button>
+                <button icon="COG_O">
+                    <tooltip text="COG_O"/>
+                </button>
+                <button icon="COG">
+                    <tooltip text="COG"/>
+                </button>
+                <button icon="COGS">
+                    <tooltip text="COGS"/>
+                </button>
+                <button icon="COIN_PILES">
+                    <tooltip text="COIN_PILES"/>
+                </button>
+                <button icon="COINS">
+                    <tooltip text="COINS"/>
+                </button>
+                <button icon="COMBOBOX">
+                    <tooltip text="COMBOBOX"/>
+                </button>
+                <button icon="COMMENT_ELLIPSIS_O">
+                    <tooltip text="COMMENT_ELLIPSIS_O"/>
+                </button>
+                <button icon="COMMENT_ELLIPSIS">
+                    <tooltip text="COMMENT_ELLIPSIS"/>
+                </button>
+                <button icon="COMMENT_O">
+                    <tooltip text="COMMENT_O"/>
+                </button>
+                <button icon="COMMENT">
+                    <tooltip text="COMMENT"/>
+                </button>
+                <button icon="COMMENTS_O">
+                    <tooltip text="COMMENTS_O"/>
+                </button>
+                <button icon="COMMENTS">
+                    <tooltip text="COMMENTS"/>
+                </button>
+                <button icon="COMPILE">
+                    <tooltip text="COMPILE"/>
+                </button>
+                <button icon="COMPRESS_SQUARE">
+                    <tooltip text="COMPRESS_SQUARE"/>
+                </button>
+                <button icon="COMPRESS">
+                    <tooltip text="COMPRESS"/>
+                </button>
+                <button icon="CONNECT_O">
+                    <tooltip text="CONNECT_O"/>
+                </button>
+                <button icon="CONNECT">
+                    <tooltip text="CONNECT"/>
+                </button>
+                <button icon="CONTROLLER">
+                    <tooltip text="CONTROLLER"/>
+                </button>
+                <button icon="COPY_O">
+                    <tooltip text="COPY_O"/>
+                </button>
+                <button icon="COPY">
+                    <tooltip text="COPY"/>
+                </button>
+                <button icon="COPYRIGHT">
+                    <tooltip text="COPYRIGHT"/>
+                </button>
+                <button icon="CORNER_LOWER_LEFT">
+                    <tooltip text="CORNER_LOWER_LEFT"/>
+                </button>
+                <button icon="CORNER_LOWER_RIGHT">
+                    <tooltip text="CORNER_LOWER_RIGHT"/>
+                </button>
+                <button icon="CORNER_UPPER_LEFT">
+                    <tooltip text="CORNER_UPPER_LEFT"/>
+                </button>
+                <button icon="CORNER_UPPER_RIGHT">
+                    <tooltip text="CORNER_UPPER_RIGHT"/>
+                </button>
+                <button icon="CREDIT_CARD">
+                    <tooltip text="CREDIT_CARD"/>
+                </button>
+                <button icon="CROP">
+                    <tooltip text="CROP"/>
+                </button>
+                <button icon="CROSS_CUTLERY">
+                    <tooltip text="CROSS_CUTLERY"/>
+                </button>
+                <button icon="CROSSHAIRS">
+                    <tooltip text="CROSSHAIRS"/>
+                </button>
+                <button icon="CSS">
+                    <tooltip text="CSS"/>
+                </button>
+                <button icon="CTRL_A">
+                    <tooltip text="CTRL_A"/>
+                </button>
+                <button icon="CTRL">
+                    <tooltip text="CTRL"/>
+                </button>
+                <button icon="CUBE">
+                    <tooltip text="CUBE"/>
+                </button>
+                <button icon="CUBES">
+                    <tooltip text="CUBES"/>
+                </button>
+                <button icon="CURLY_BRACKETS">
+                    <tooltip text="CURLY_BRACKETS"/>
+                </button>
+                <button icon="CURSOR_O">
+                    <tooltip text="CURSOR_O"/>
+                </button>
+                <button icon="CURSOR">
+                    <tooltip text="CURSOR"/>
+                </button>
+                <button icon="CUTLERY">
+                    <tooltip text="CUTLERY"/>
+                </button>
+                <button icon="DASHBOARD">
+                    <tooltip text="DASHBOARD"/>
+                </button>
+                <button icon="DATABASE">
+                    <tooltip text="DATABASE"/>
+                </button>
+                <button icon="DATE_INPUT">
+                    <tooltip text="DATE_INPUT"/>
+                </button>
+                <button icon="DEINDENT">
+                    <tooltip text="DEINDENT"/>
+                </button>
+                <button icon="DEL_A">
+                    <tooltip text="DEL_A"/>
+                </button>
+                <button icon="DEL">
+                    <tooltip text="DEL"/>
+                </button>
+                <button icon="DENTAL_CHAIR">
+                    <tooltip text="DENTAL_CHAIR"/>
+                </button>
+                <button icon="DESKTOP">
+                    <tooltip text="DESKTOP"/>
+                </button>
+                <button icon="DIAMOND_O">
+                    <tooltip text="DIAMOND_O"/>
+                </button>
+                <button icon="DIAMOND">
+                    <tooltip text="DIAMOND"/>
+                </button>
+                <button icon="DIPLOMA_SCROLL">
+                    <tooltip text="DIPLOMA_SCROLL"/>
+                </button>
+                <button icon="DIPLOMA">
+                    <tooltip text="DIPLOMA"/>
+                </button>
+                <button icon="DISC">
+                    <tooltip text="DISC"/>
+                </button>
+                <button icon="DOCTOR_BRIEFCASE">
+                    <tooltip text="DOCTOR_BRIEFCASE"/>
+                </button>
+                <button icon="DOCTOR">
+                    <tooltip text="DOCTOR"/>
+                </button>
+                <button icon="DOLLAR">
+                    <tooltip text="DOLLAR"/>
+                </button>
+                <button icon="DOT_CIRCLE">
+                    <tooltip text="DOT_CIRCLE"/>
+                </button>
+                <button icon="DOWNLOAD_ALT">
+                    <tooltip text="DOWNLOAD_ALT"/>
+                </button>
+                <button icon="DOWNLOAD">
+                    <tooltip text="DOWNLOAD"/>
+                </button>
+                <button icon="DROP">
+                    <tooltip text="DROP"/>
+                </button>
+                <button icon="EDIT">
+                    <tooltip text="EDIT"/>
+                </button>
+                <button icon="EJECT">
+                    <tooltip text="EJECT"/>
+                </button>
+                <button icon="ELASTIC">
+                    <tooltip text="ELASTIC"/>
+                </button>
+                <button icon="ELLIPSIS_CIRCLE_O">
+                    <tooltip text="ELLIPSIS_CIRCLE_O"/>
+                </button>
+                <button icon="ELLIPSIS_CIRCLE">
+                    <tooltip text="ELLIPSIS_CIRCLE"/>
+                </button>
+                <button icon="ELLIPSIS_DOTS_H">
+                    <tooltip text="ELLIPSIS_DOTS_H"/>
+                </button>
+                <button icon="ELLIPSIS_DOTS_V">
+                    <tooltip text="ELLIPSIS_DOTS_V"/>
+                </button>
+                <button icon="ELLIPSIS_H">
+                    <tooltip text="ELLIPSIS_H"/>
+                </button>
+                <button icon="ELLIPSIS_V">
+                    <tooltip text="ELLIPSIS_V"/>
+                </button>
+                <button icon="ENTER_ARROW">
+                    <tooltip text="ENTER_ARROW"/>
+                </button>
+                <button icon="ENTER">
+                    <tooltip text="ENTER"/>
+                </button>
+                <button icon="ENVELOPE_O">
+                    <tooltip text="ENVELOPE_O"/>
+                </button>
+                <button icon="ENVELOPE_OPEN_O">
+                    <tooltip text="ENVELOPE_OPEN_O"/>
+                </button>
+                <button icon="ENVELOPE_OPEN">
+                    <tooltip text="ENVELOPE_OPEN"/>
+                </button>
+                <button icon="ENVELOPE">
+                    <tooltip text="ENVELOPE"/>
+                </button>
+                <button icon="ENVELOPES_O">
+                    <tooltip text="ENVELOPES_O"/>
+                </button>
+                <button icon="ENVELOPES">
+                    <tooltip text="ENVELOPES"/>
+                </button>
+                <button icon="ERASER">
+                    <tooltip text="ERASER"/>
+                </button>
+                <button icon="ESC_A">
+                    <tooltip text="ESC_A"/>
+                </button>
+                <button icon="ESC">
+                    <tooltip text="ESC"/>
+                </button>
+                <button icon="EURO">
+                    <tooltip text="EURO"/>
+                </button>
+                <button icon="EXCHANGE">
+                    <tooltip text="EXCHANGE"/>
+                </button>
+                <button icon="EXCLAMATION_CIRCLE_O">
+                    <tooltip text="EXCLAMATION_CIRCLE_O"/>
+                </button>
+                <button icon="EXCLAMATION_CIRCLE">
+                    <tooltip text="EXCLAMATION_CIRCLE"/>
+                </button>
+                <button icon="EXCLAMATION">
+                    <tooltip text="EXCLAMATION"/>
+                </button>
+                <button icon="EXIT_O">
+                    <tooltip text="EXIT_O"/>
+                </button>
+                <button icon="EXIT">
+                    <tooltip text="EXIT"/>
+                </button>
+                <button icon="EXPAND_FULL">
+                    <tooltip text="EXPAND_FULL"/>
+                </button>
+                <button icon="EXPAND_SQUARE">
+                    <tooltip text="EXPAND_SQUARE"/>
+                </button>
+                <button icon="EXPAND">
+                    <tooltip text="EXPAND"/>
+                </button>
+                <button icon="EXTERNAL_BROWSER">
+                    <tooltip text="EXTERNAL_BROWSER"/>
+                </button>
+                <button icon="EXTERNAL_LINK">
+                    <tooltip text="EXTERNAL_LINK"/>
+                </button>
+                <button icon="EYE_SLASH">
+                    <tooltip text="EYE_SLASH"/>
+                </button>
+                <button icon="EYE">
+                    <tooltip text="EYE"/>
+                </button>
+                <button icon="EYEDROPPER">
+                    <tooltip text="EYEDROPPER"/>
+                </button>
+                <button icon="FACEBOOK_SQUARE">
+                    <tooltip text="FACEBOOK_SQUARE"/>
+                </button>
+                <button icon="FACEBOOK">
+                    <tooltip text="FACEBOOK"/>
+                </button>
+                <button icon="FACTORY">
+                    <tooltip text="FACTORY"/>
+                </button>
+                <button icon="FAMILY">
+                    <tooltip text="FAMILY"/>
+                </button>
+                <button icon="FAST_BACKWARD">
+                    <tooltip text="FAST_BACKWARD"/>
+                </button>
+                <button icon="FAST_FORWARD">
+                    <tooltip text="FAST_FORWARD"/>
+                </button>
+                <button icon="FEMALE">
+                    <tooltip text="FEMALE"/>
+                </button>
+                <button icon="FILE_ADD">
+                    <tooltip text="FILE_ADD"/>
+                </button>
+                <button icon="FILE_CODE">
+                    <tooltip text="FILE_CODE"/>
+                </button>
+                <button icon="FILE_FONT">
+                    <tooltip text="FILE_FONT"/>
+                </button>
+                <button icon="FILE_MOVIE">
+                    <tooltip text="FILE_MOVIE"/>
+                </button>
+                <button icon="FILE_O">
+                    <tooltip text="FILE_O"/>
+                </button>
+                <button icon="FILE_PICTURE">
+                    <tooltip text="FILE_PICTURE"/>
+                </button>
+                <button icon="FILE_PRESENTATION">
+                    <tooltip text="FILE_PRESENTATION"/>
+                </button>
+                <button icon="FILE_PROCESS">
+                    <tooltip text="FILE_PROCESS"/>
+                </button>
+                <button icon="FILE_REFRESH">
+                    <tooltip text="FILE_REFRESH"/>
+                </button>
+                <button icon="FILE_REMOVE">
+                    <tooltip text="FILE_REMOVE"/>
+                </button>
+                <button icon="FILE_SEARCH">
+                    <tooltip text="FILE_SEARCH"/>
+                </button>
+                <button icon="FILE_SOUND">
+                    <tooltip text="FILE_SOUND"/>
+                </button>
+                <button icon="FILE_START">
+                    <tooltip text="FILE_START"/>
+                </button>
+                <button icon="FILE_TABLE">
+                    <tooltip text="FILE_TABLE"/>
+                </button>
+                <button icon="FILE_TEXT_O">
+                    <tooltip text="FILE_TEXT_O"/>
+                </button>
+                <button icon="FILE_TEXT">
+                    <tooltip text="FILE_TEXT"/>
+                </button>
+                <button icon="FILE_TREE_SMALL">
+                    <tooltip text="FILE_TREE_SMALL"/>
+                </button>
+                <button icon="FILE_TREE_SUB">
+                    <tooltip text="FILE_TREE_SUB"/>
+                </button>
+                <button icon="FILE_TREE">
+                    <tooltip text="FILE_TREE"/>
+                </button>
+                <button icon="FILE_ZIP">
+                    <tooltip text="FILE_ZIP"/>
+                </button>
+                <button icon="FILE">
+                    <tooltip text="FILE"/>
+                </button>
+                <button icon="FILL">
+                    <tooltip text="FILL"/>
+                </button>
+                <button icon="FILM">
+                    <tooltip text="FILM"/>
+                </button>
+                <button icon="FILTER">
+                    <tooltip text="FILTER"/>
+                </button>
+                <button icon="FIRE">
+                    <tooltip text="FIRE"/>
+                </button>
+                <button icon="FLAG_CHECKERED">
+                    <tooltip text="FLAG_CHECKERED"/>
+                </button>
+                <button icon="FLAG_O">
+                    <tooltip text="FLAG_O"/>
+                </button>
+                <button icon="FLAG">
+                    <tooltip text="FLAG"/>
+                </button>
+                <button icon="FLASH">
+                    <tooltip text="FLASH"/>
+                </button>
+                <button icon="FLASK">
+                    <tooltip text="FLASK"/>
+                </button>
+                <button icon="FLIGHT_LANDING">
+                    <tooltip text="FLIGHT_LANDING"/>
+                </button>
+                <button icon="FLIGHT_TAKEOFF">
+                    <tooltip text="FLIGHT_TAKEOFF"/>
+                </button>
+                <button icon="FLIP_H">
+                    <tooltip text="FLIP_H"/>
+                </button>
+                <button icon="FLIP_V">
+                    <tooltip text="FLIP_V"/>
+                </button>
+                <button icon="FOLDER_ADD">
+                    <tooltip text="FOLDER_ADD"/>
+                </button>
+                <button icon="FOLDER_O">
+                    <tooltip text="FOLDER_O"/>
+                </button>
+                <button icon="FOLDER_OPEN_O">
+                    <tooltip text="FOLDER_OPEN_O"/>
+                </button>
+                <button icon="FOLDER_OPEN">
+                    <tooltip text="FOLDER_OPEN"/>
+                </button>
+                <button icon="FOLDER_REMOVE">
+                    <tooltip text="FOLDER_REMOVE"/>
+                </button>
+                <button icon="FOLDER_SEARCH">
+                    <tooltip text="FOLDER_SEARCH"/>
+                </button>
+                <button icon="FOLDER">
+                    <tooltip text="FOLDER"/>
+                </button>
+                <button icon="FONT">
+                    <tooltip text="FONT"/>
+                </button>
+                <button icon="FORM">
+                    <tooltip text="FORM"/>
+                </button>
+                <button icon="FORWARD">
+                    <tooltip text="FORWARD"/>
+                </button>
+                <button icon="FROWN_O">
+                    <tooltip text="FROWN_O"/>
+                </button>
+                <button icon="FUNCTION">
+                    <tooltip text="FUNCTION"/>
+                </button>
+                <button icon="FUNNEL">
+                    <tooltip text="FUNNEL"/>
+                </button>
+                <button icon="GAMEPAD">
+                    <tooltip text="GAMEPAD"/>
+                </button>
+                <button icon="GAVEL">
+                    <tooltip text="GAVEL"/>
+                </button>
+                <button icon="GIFT">
+                    <tooltip text="GIFT"/>
+                </button>
+                <button icon="GLASS">
+                    <tooltip text="GLASS"/>
+                </button>
+                <button icon="GLASSES">
+                    <tooltip text="GLASSES"/>
+                </button>
+                <button icon="GLOBE_WIRE">
+                    <tooltip text="GLOBE_WIRE"/>
+                </button>
+                <button icon="GLOBE">
+                    <tooltip text="GLOBE"/>
+                </button>
+                <button icon="GOLF">
+                    <tooltip text="GOLF"/>
+                </button>
+                <button icon="GOOGLE_PLUS_SQUARE">
+                    <tooltip text="GOOGLE_PLUS_SQUARE"/>
+                </button>
+                <button icon="GOOGLE_PLUS">
+                    <tooltip text="GOOGLE_PLUS"/>
+                </button>
+                <button icon="GRAB">
+                    <tooltip text="GRAB"/>
+                </button>
+                <button icon="GRID_BEVEL">
+                    <tooltip text="GRID_BEVEL"/>
+                </button>
+                <button icon="GRID_BIG_O">
+                    <tooltip text="GRID_BIG_O"/>
+                </button>
+                <button icon="GRID_BIG">
+                    <tooltip text="GRID_BIG"/>
+                </button>
+                <button icon="GRID_H">
+                    <tooltip text="GRID_H"/>
+                </button>
+                <button icon="GRID_SMALL_O">
+                    <tooltip text="GRID_SMALL_O"/>
+                </button>
+                <button icon="GRID_SMALL">
+                    <tooltip text="GRID_SMALL"/>
+                </button>
+                <button icon="GRID_V">
+                    <tooltip text="GRID_V"/>
+                </button>
+                <button icon="GRID">
+                    <tooltip text="GRID"/>
+                </button>
+                <button icon="GROUP">
+                    <tooltip text="GROUP"/>
+                </button>
+                <button icon="HAMMER">
+                    <tooltip text="HAMMER"/>
+                </button>
+                <button icon="HAND">
+                    <tooltip text="HAND"/>
+                </button>
+                <button icon="HANDLE_CORNER">
+                    <tooltip text="HANDLE_CORNER"/>
+                </button>
+                <button icon="HANDS_UP">
+                    <tooltip text="HANDS_UP"/>
+                </button>
+                <button icon="HANDSHAKE">
+                    <tooltip text="HANDSHAKE"/>
+                </button>
+                <button icon="HARDDRIVE_O">
+                    <tooltip text="HARDDRIVE_O"/>
+                </button>
+                <button icon="HARDDRIVE">
+                    <tooltip text="HARDDRIVE"/>
+                </button>
+                <button icon="HASH">
+                    <tooltip text="HASH"/>
+                </button>
+                <button icon="HEADER">
+                    <tooltip text="HEADER"/>
+                </button>
+                <button icon="HEADPHONES">
+                    <tooltip text="HEADPHONES"/>
+                </button>
+                <button icon="HEADSET">
+                    <tooltip text="HEADSET"/>
+                </button>
+                <button icon="HEALTH_CARD">
+                    <tooltip text="HEALTH_CARD"/>
+                </button>
+                <button icon="HEART_O">
+                    <tooltip text="HEART_O"/>
+                </button>
+                <button icon="HEART">
+                    <tooltip text="HEART"/>
+                </button>
+                <button icon="HOME_O">
+                    <tooltip text="HOME_O"/>
+                </button>
+                <button icon="HOME">
+                    <tooltip text="HOME"/>
+                </button>
+                <button icon="HOSPITAL">
+                    <tooltip text="HOSPITAL"/>
+                </button>
+                <button icon="HOURGLASS_EMPTY">
+                    <tooltip text="HOURGLASS_EMPTY"/>
+                </button>
+                <button icon="HOURGLASS_END">
+                    <tooltip text="HOURGLASS_END"/>
+                </button>
+                <button icon="HOURGLASS_START">
+                    <tooltip text="HOURGLASS_START"/>
+                </button>
+                <button icon="HOURGLASS">
+                    <tooltip text="HOURGLASS"/>
+                </button>
+                <button icon="INBOX">
+                    <tooltip text="INBOX"/>
+                </button>
+                <button icon="INDENT">
+                    <tooltip text="INDENT"/>
+                </button>
+                <button icon="INFO_CIRCLE_O">
+                    <tooltip text="INFO_CIRCLE_O"/>
+                </button>
+                <button icon="INFO_CIRCLE">
+                    <tooltip text="INFO_CIRCLE"/>
+                </button>
+                <button icon="INFO">
+                    <tooltip text="INFO"/>
+                </button>
+                <button icon="INPUT">
+                    <tooltip text="INPUT"/>
+                </button>
+                <button icon="INSERT">
+                    <tooltip text="INSERT"/>
+                </button>
+                <button icon="INSTITUTION">
+                    <tooltip text="INSTITUTION"/>
+                </button>
+                <button icon="INVOICE">
+                    <tooltip text="INVOICE"/>
+                </button>
+                <button icon="ITALIC">
+                    <tooltip text="ITALIC"/>
+                </button>
+                <button icon="KEY_O">
+                    <tooltip text="KEY_O"/>
+                </button>
+                <button icon="KEY">
+                    <tooltip text="KEY"/>
+                </button>
+                <button icon="KEYBOARD_O">
+                    <tooltip text="KEYBOARD_O"/>
+                </button>
+                <button icon="KEYBOARD">
+                    <tooltip text="KEYBOARD"/>
+                </button>
+                <button icon="LAPTOP">
+                    <tooltip text="LAPTOP"/>
+                </button>
+                <button icon="LAYOUT">
+                    <tooltip text="LAYOUT"/>
+                </button>
+                <button icon="LEVEL_DOWN_BOLD">
+                    <tooltip text="LEVEL_DOWN_BOLD"/>
+                </button>
+                <button icon="LEVEL_DOWN">
+                    <tooltip text="LEVEL_DOWN"/>
+                </button>
+                <button icon="LEVEL_LEFT_BOLD">
+                    <tooltip text="LEVEL_LEFT_BOLD"/>
+                </button>
+                <button icon="LEVEL_LEFT">
+                    <tooltip text="LEVEL_LEFT"/>
+                </button>
+                <button icon="LEVEL_RIGHT_BOLD">
+                    <tooltip text="LEVEL_RIGHT_BOLD"/>
+                </button>
+                <button icon="LEVEL_RIGHT">
+                    <tooltip text="LEVEL_RIGHT"/>
+                </button>
+                <button icon="LEVEL_UP_BOLD">
+                    <tooltip text="LEVEL_UP_BOLD"/>
+                </button>
+                <button icon="LEVEL_UP">
+                    <tooltip text="LEVEL_UP"/>
+                </button>
+                <button icon="LIFEBUOY">
+                    <tooltip text="LIFEBUOY"/>
+                </button>
+                <button icon="LIGHTBULB">
+                    <tooltip text="LIGHTBULB"/>
+                </button>
+                <button icon="LINE_BAR_CHART">
+                    <tooltip text="LINE_BAR_CHART"/>
+                </button>
+                <button icon="LINE_CHART">
+                    <tooltip text="LINE_CHART"/>
+                </button>
+                <button icon="LINE_H">
+                    <tooltip text="LINE_H"/>
+                </button>
+                <button icon="LINE_V">
+                    <tooltip text="LINE_V"/>
+                </button>
+                <button icon="LINES_LIST">
+                    <tooltip text="LINES_LIST"/>
+                </button>
+                <button icon="LINES">
+                    <tooltip text="LINES"/>
+                </button>
+                <button icon="LINK">
+                    <tooltip text="LINK"/>
+                </button>
+                <button icon="LIST_OL">
+                    <tooltip text="LIST_OL"/>
+                </button>
+                <button icon="LIST_SELECT">
+                    <tooltip text="LIST_SELECT"/>
+                </button>
+                <button icon="LIST_UL">
+                    <tooltip text="LIST_UL"/>
+                </button>
+                <button icon="LIST">
+                    <tooltip text="LIST"/>
+                </button>
+                <button icon="LOCATION_ARROW_CIRCLE_O">
+                    <tooltip text="LOCATION_ARROW_CIRCLE_O"/>
+                </button>
+                <button icon="LOCATION_ARROW_CIRCLE">
+                    <tooltip text="LOCATION_ARROW_CIRCLE"/>
+                </button>
+                <button icon="LOCATION_ARROW">
+                    <tooltip text="LOCATION_ARROW"/>
+                </button>
+                <button icon="LOCK">
+                    <tooltip text="LOCK"/>
+                </button>
+                <button icon="MAGIC">
+                    <tooltip text="MAGIC"/>
+                </button>
+                <button icon="MAGNET">
+                    <tooltip text="MAGNET"/>
+                </button>
+                <button icon="MAILBOX">
+                    <tooltip text="MAILBOX"/>
+                </button>
+                <button icon="MALE">
+                    <tooltip text="MALE"/>
+                </button>
+                <button icon="MAP_MARKER">
+                    <tooltip text="MAP_MARKER"/>
+                </button>
+                <button icon="MARGIN_BOTTOM">
+                    <tooltip text="MARGIN_BOTTOM"/>
+                </button>
+                <button icon="MARGIN_LEFT">
+                    <tooltip text="MARGIN_LEFT"/>
+                </button>
+                <button icon="MARGIN_RIGHT">
+                    <tooltip text="MARGIN_RIGHT"/>
+                </button>
+                <button icon="MARGIN_TOP">
+                    <tooltip text="MARGIN_TOP"/>
+                </button>
+                <button icon="MARGIN">
+                    <tooltip text="MARGIN"/>
+                </button>
+                <button icon="MEDAL">
+                    <tooltip text="MEDAL"/>
+                </button>
+                <button icon="MEGAPHONE">
+                    <tooltip text="MEGAPHONE"/>
+                </button>
+                <button icon="MEH_O">
+                    <tooltip text="MEH_O"/>
+                </button>
+                <button icon="MENU">
+                    <tooltip text="MENU"/>
+                </button>
+                <button icon="MICROPHONE">
+                    <tooltip text="MICROPHONE"/>
+                </button>
+                <button icon="MINUS_CIRCLE_O">
+                    <tooltip text="MINUS_CIRCLE_O"/>
+                </button>
+                <button icon="MINUS_CIRCLE">
+                    <tooltip text="MINUS_CIRCLE"/>
+                </button>
+                <button icon="MINUS_SQUARE_O">
+                    <tooltip text="MINUS_SQUARE_O"/>
+                </button>
+                <button icon="MINUS">
+                    <tooltip text="MINUS"/>
+                </button>
+                <button icon="MOBILE_BROWSER">
+                    <tooltip text="MOBILE_BROWSER"/>
+                </button>
+                <button icon="MOBILE_RETRO">
+                    <tooltip text="MOBILE_RETRO"/>
+                </button>
+                <button icon="MOBILE">
+                    <tooltip text="MOBILE"/>
+                </button>
+                <button icon="MODAL_LIST">
+                    <tooltip text="MODAL_LIST"/>
+                </button>
+                <button icon="MODAL">
+                    <tooltip text="MODAL"/>
+                </button>
+                <button icon="MONEY_DEPOSIT">
+                    <tooltip text="MONEY_DEPOSIT"/>
+                </button>
+                <button icon="MONEY_EXCHANGE">
+                    <tooltip text="MONEY_EXCHANGE"/>
+                </button>
+                <button icon="MONEY_WITHDRAW">
+                    <tooltip text="MONEY_WITHDRAW"/>
+                </button>
+                <button icon="MONEY">
+                    <tooltip text="MONEY"/>
+                </button>
+                <button icon="MOON_O">
+                    <tooltip text="MOON_O"/>
+                </button>
+                <button icon="MOON">
+                    <tooltip text="MOON"/>
+                </button>
+                <button icon="MORNING">
+                    <tooltip text="MORNING"/>
+                </button>
+                <button icon="MOVIE">
+                    <tooltip text="MOVIE"/>
+                </button>
+                <button icon="MUSIC">
+                    <tooltip text="MUSIC"/>
+                </button>
+                <button icon="MUTE">
+                    <tooltip text="MUTE"/>
+                </button>
+                <button icon="NATIVE_BUTTON">
+                    <tooltip text="NATIVE_BUTTON"/>
+                </button>
+                <button icon="NEWSPAPER">
+                    <tooltip text="NEWSPAPER"/>
+                </button>
+                <button icon="NOTEBOOK">
+                    <tooltip text="NOTEBOOK"/>
+                </button>
+                <button icon="NURSE">
+                    <tooltip text="NURSE"/>
+                </button>
+                <button icon="OFFICE">
+                    <tooltip text="OFFICE"/>
+                </button>
+                <button icon="OPEN_BOOK">
+                    <tooltip text="OPEN_BOOK"/>
+                </button>
+                <button icon="OPTION_A">
+                    <tooltip text="OPTION_A"/>
+                </button>
+                <button icon="OPTION">
+                    <tooltip text="OPTION"/>
+                </button>
+                <button icon="OPTIONS">
+                    <tooltip text="OPTIONS"/>
+                </button>
+                <button icon="ORIENTATION">
+                    <tooltip text="ORIENTATION"/>
+                </button>
+                <button icon="OUT">
+                    <tooltip text="OUT"/>
+                </button>
+                <button icon="OUTBOX">
+                    <tooltip text="OUTBOX"/>
+                </button>
+                <button icon="PACKAGE">
+                    <tooltip text="PACKAGE"/>
+                </button>
+                <button icon="PADDING_BOTTOM">
+                    <tooltip text="PADDING_BOTTOM"/>
+                </button>
+                <button icon="PADDING_LEFT">
+                    <tooltip text="PADDING_LEFT"/>
+                </button>
+                <button icon="PADDING_RIGHT">
+                    <tooltip text="PADDING_RIGHT"/>
+                </button>
+                <button icon="PADDING_TOP">
+                    <tooltip text="PADDING_TOP"/>
+                </button>
+                <button icon="PADDING">
+                    <tooltip text="PADDING"/>
+                </button>
+                <button icon="PAINT_ROLL">
+                    <tooltip text="PAINT_ROLL"/>
+                </button>
+                <button icon="PAINTBRUSH">
+                    <tooltip text="PAINTBRUSH"/>
+                </button>
+                <button icon="PALETTE">
+                    <tooltip text="PALETTE"/>
+                </button>
+                <button icon="PANEL">
+                    <tooltip text="PANEL"/>
+                </button>
+                <button icon="PAPERCLIP">
+                    <tooltip text="PAPERCLIP"/>
+                </button>
+                <button icon="PAPERPLANE_O">
+                    <tooltip text="PAPERPLANE_O"/>
+                </button>
+                <button icon="PAPERPLANE">
+                    <tooltip text="PAPERPLANE"/>
+                </button>
+                <button icon="PARAGRAPH">
+                    <tooltip text="PARAGRAPH"/>
+                </button>
+                <button icon="PASSWORD">
+                    <tooltip text="PASSWORD"/>
+                </button>
+                <button icon="PASTE">
+                    <tooltip text="PASTE"/>
+                </button>
+                <button icon="PAUSE">
+                    <tooltip text="PAUSE"/>
+                </button>
+                <button icon="PENCIL">
+                    <tooltip text="PENCIL"/>
+                </button>
+                <button icon="PHONE_LANDLINE">
+                    <tooltip text="PHONE_LANDLINE"/>
+                </button>
+                <button icon="PHONE">
+                    <tooltip text="PHONE"/>
+                </button>
+                <button icon="PICTURE">
+                    <tooltip text="PICTURE"/>
+                </button>
+                <button icon="PIE_BAR_CHART">
+                    <tooltip text="PIE_BAR_CHART"/>
+                </button>
+                <button icon="PIE_CHART">
+                    <tooltip text="PIE_CHART"/>
+                </button>
+                <button icon="PIGGY_BANK_COIN">
+                    <tooltip text="PIGGY_BANK_COIN"/>
+                </button>
+                <button icon="PIGGY_BANK">
+                    <tooltip text="PIGGY_BANK"/>
+                </button>
+                <button icon="PILL">
+                    <tooltip text="PILL"/>
+                </button>
+                <button icon="PILLS">
+                    <tooltip text="PILLS"/>
+                </button>
+                <button icon="PIN_POST">
+                    <tooltip text="PIN_POST"/>
+                </button>
+                <button icon="PIN">
+                    <tooltip text="PIN"/>
+                </button>
+                <button icon="PLAY_CIRCLE_O">
+                    <tooltip text="PLAY_CIRCLE_O"/>
+                </button>
+                <button icon="PLAY_CIRCLE">
+                    <tooltip text="PLAY_CIRCLE"/>
+                </button>
+                <button icon="PLAY">
+                    <tooltip text="PLAY"/>
+                </button>
+                <button icon="PLUG">
+                    <tooltip text="PLUG"/>
+                </button>
+                <button icon="PLUS_CIRCLE_O">
+                    <tooltip text="PLUS_CIRCLE_O"/>
+                </button>
+                <button icon="PLUS_CIRCLE">
+                    <tooltip text="PLUS_CIRCLE"/>
+                </button>
+                <button icon="PLUS_MINUS">
+                    <tooltip text="PLUS_MINUS"/>
+                </button>
+                <button icon="PLUS_SQUARE_O">
+                    <tooltip text="PLUS_SQUARE_O"/>
+                </button>
+                <button icon="PLUS">
+                    <tooltip text="PLUS"/>
+                </button>
+                <button icon="POINTER">
+                    <tooltip text="POINTER"/>
+                </button>
+                <button icon="POWER_OFF">
+                    <tooltip text="POWER_OFF"/>
+                </button>
+                <button icon="PRESENTATION">
+                    <tooltip text="PRESENTATION"/>
+                </button>
+                <button icon="PRINT">
+                    <tooltip text="PRINT"/>
+                </button>
+                <button icon="PROGRESSBAR">
+                    <tooltip text="PROGRESSBAR"/>
+                </button>
+                <button icon="PUZZLE_PIECE">
+                    <tooltip text="PUZZLE_PIECE"/>
+                </button>
+                <button icon="PYRAMID_CHART">
+                    <tooltip text="PYRAMID_CHART"/>
+                </button>
+                <button icon="QRCODE">
+                    <tooltip text="QRCODE"/>
+                </button>
+                <button icon="QUESTION_CIRCLE_O">
+                    <tooltip text="QUESTION_CIRCLE_O"/>
+                </button>
+                <button icon="QUESTION_CIRCLE">
+                    <tooltip text="QUESTION_CIRCLE"/>
+                </button>
+                <button icon="QUESTION">
+                    <tooltip text="QUESTION"/>
+                </button>
+                <button icon="QUOTE_LEFT">
+                    <tooltip text="QUOTE_LEFT"/>
+                </button>
+                <button icon="QUOTE_RIGHT">
+                    <tooltip text="QUOTE_RIGHT"/>
+                </button>
+                <button icon="RANDOM">
+                    <tooltip text="RANDOM"/>
+                </button>
+                <button icon="RASTER_LOWER_LEFT">
+                    <tooltip text="RASTER_LOWER_LEFT"/>
+                </button>
+                <button icon="RASTER">
+                    <tooltip text="RASTER"/>
+                </button>
+                <button icon="RECORDS">
+                    <tooltip text="RECORDS"/>
+                </button>
+                <button icon="RECYCLE">
+                    <tooltip text="RECYCLE"/>
+                </button>
+                <button icon="REFRESH">
+                    <tooltip text="REFRESH"/>
+                </button>
+                <button icon="REPLY_ALL">
+                    <tooltip text="REPLY_ALL"/>
+                </button>
+                <button icon="REPLY">
+                    <tooltip text="REPLY"/>
+                </button>
+                <button icon="RESIZE_H">
+                    <tooltip text="RESIZE_H"/>
+                </button>
+                <button icon="RESIZE_V">
+                    <tooltip text="RESIZE_V"/>
+                </button>
+                <button icon="RETWEET">
+                    <tooltip text="RETWEET"/>
+                </button>
+                <button icon="RHOMBUS">
+                    <tooltip text="RHOMBUS"/>
+                </button>
+                <button icon="ROAD_BRANCH">
+                    <tooltip text="ROAD_BRANCH"/>
+                </button>
+                <button icon="ROAD_BRANCHES">
+                    <tooltip text="ROAD_BRANCHES"/>
+                </button>
+                <button icon="ROAD_SPLIT">
+                    <tooltip text="ROAD_SPLIT"/>
+                </button>
+                <button icon="ROAD">
+                    <tooltip text="ROAD"/>
+                </button>
+                <button icon="ROCKET">
+                    <tooltip text="ROCKET"/>
+                </button>
+                <button icon="ROTATE_LEFT">
+                    <tooltip text="ROTATE_LEFT"/>
+                </button>
+                <button icon="ROTATE_RIGHT">
+                    <tooltip text="ROTATE_RIGHT"/>
+                </button>
+                <button icon="RSS_SQUARE">
+                    <tooltip text="RSS_SQUARE"/>
+                </button>
+                <button icon="RSS">
+                    <tooltip text="RSS"/>
+                </button>
+                <button icon="SAFE_LOCK">
+                    <tooltip text="SAFE_LOCK"/>
+                </button>
+                <button icon="SAFE">
+                    <tooltip text="SAFE"/>
+                </button>
+                <button icon="SCALE_UNBALANCE">
+                    <tooltip text="SCALE_UNBALANCE"/>
+                </button>
+                <button icon="SCALE">
+                    <tooltip text="SCALE"/>
+                </button>
+                <button icon="SCATTER_CHART">
+                    <tooltip text="SCATTER_CHART"/>
+                </button>
+                <button icon="SCISSORS">
+                    <tooltip text="SCISSORS"/>
+                </button>
+                <button icon="SCREWDRIVER">
+                    <tooltip text="SCREWDRIVER"/>
+                </button>
+                <button icon="SEARCH_MINUS">
+                    <tooltip text="SEARCH_MINUS"/>
+                </button>
+                <button icon="SEARCH_PLUS">
+                    <tooltip text="SEARCH_PLUS"/>
+                </button>
+                <button icon="SEARCH">
+                    <tooltip text="SEARCH"/>
+                </button>
+                <button icon="SELECT">
+                    <tooltip text="SELECT"/>
+                </button>
+                <button icon="SERVER">
+                    <tooltip text="SERVER"/>
+                </button>
+                <button icon="SHARE_SQUARE">
+                    <tooltip text="SHARE_SQUARE"/>
+                </button>
+                <button icon="SHARE">
+                    <tooltip text="SHARE"/>
+                </button>
+                <button icon="SHIELD">
+                    <tooltip text="SHIELD"/>
+                </button>
+                <button icon="SHIFT_ARROW">
+                    <tooltip text="SHIFT_ARROW"/>
+                </button>
+                <button icon="SHIFT">
+                    <tooltip text="SHIFT"/>
+                </button>
+                <button icon="SHOP">
+                    <tooltip text="SHOP"/>
+                </button>
+                <button icon="SIGN_IN_ALT">
+                    <tooltip text="SIGN_IN_ALT"/>
+                </button>
+                <button icon="SIGN_IN">
+                    <tooltip text="SIGN_IN"/>
+                </button>
+                <button icon="SIGN_OUT_ALT">
+                    <tooltip text="SIGN_OUT_ALT"/>
+                </button>
+                <button icon="SIGN_OUT">
+                    <tooltip text="SIGN_OUT"/>
+                </button>
+                <button icon="SIGNAL">
+                    <tooltip text="SIGNAL"/>
+                </button>
+                <button icon="SITEMAP">
+                    <tooltip text="SITEMAP"/>
+                </button>
+                <button icon="SLIDER">
+                    <tooltip text="SLIDER"/>
+                </button>
+                <button icon="SLIDERS">
+                    <tooltip text="SLIDERS"/>
+                </button>
+                <button icon="SMILEY_O">
+                    <tooltip text="SMILEY_O"/>
+                </button>
+                <button icon="SORT">
+                    <tooltip text="SORT"/>
+                </button>
+                <button icon="SOUND_DISABLE">
+                    <tooltip text="SOUND_DISABLE"/>
+                </button>
+                <button icon="SPARK_LINE">
+                    <tooltip text="SPARK_LINE"/>
+                </button>
+                <button icon="SPECIALIST">
+                    <tooltip text="SPECIALIST"/>
+                </button>
+                <button icon="SPINNER_ARC">
+                    <tooltip text="SPINNER_ARC"/>
+                </button>
+                <button icon="SPINNER_THIRD">
+                    <tooltip text="SPINNER_THIRD"/>
+                </button>
+                <button icon="SPINNER">
+                    <tooltip text="SPINNER"/>
+                </button>
+                <button icon="SPLINE_AREA_CHART">
+                    <tooltip text="SPLINE_AREA_CHART"/>
+                </button>
+                <button icon="SPLINE_CHART">
+                    <tooltip text="SPLINE_CHART"/>
+                </button>
+                <button icon="SPLIT_H">
+                    <tooltip text="SPLIT_H"/>
+                </button>
+                <button icon="SPLIT_V">
+                    <tooltip text="SPLIT_V"/>
+                </button>
+                <button icon="SPLIT">
+                    <tooltip text="SPLIT"/>
+                </button>
+                <button icon="SPOON">
+                    <tooltip text="SPOON"/>
+                </button>
+                <button icon="SQUARE_SHADOW">
+                    <tooltip text="SQUARE_SHADOW"/>
+                </button>
+                <button icon="STAR_HALF_LEFT_O">
+                    <tooltip text="STAR_HALF_LEFT_O"/>
+                </button>
+                <button icon="STAR_HALF_LEFT">
+                    <tooltip text="STAR_HALF_LEFT"/>
+                </button>
+                <button icon="STAR_HALF_RIGHT_O">
+                    <tooltip text="STAR_HALF_RIGHT_O"/>
+                </button>
+                <button icon="STAR_HALF_RIGHT">
+                    <tooltip text="STAR_HALF_RIGHT"/>
+                </button>
+                <button icon="STAR_O">
+                    <tooltip text="STAR_O"/>
+                </button>
+                <button icon="STAR">
+                    <tooltip text="STAR"/>
+                </button>
+                <button icon="START_COG">
+                    <tooltip text="START_COG"/>
+                </button>
+                <button icon="STEP_BACKWARD">
+                    <tooltip text="STEP_BACKWARD"/>
+                </button>
+                <button icon="STEP_FORWARD">
+                    <tooltip text="STEP_FORWARD"/>
+                </button>
+                <button icon="STETHOSCOPE">
+                    <tooltip text="STETHOSCOPE"/>
+                </button>
+                <button icon="STOCK">
+                    <tooltip text="STOCK"/>
+                </button>
+                <button icon="STOP_COG">
+                    <tooltip text="STOP_COG"/>
+                </button>
+                <button icon="STOP">
+                    <tooltip text="STOP"/>
+                </button>
+                <button icon="STOPWATCH">
+                    <tooltip text="STOPWATCH"/>
+                </button>
+                <button icon="STORAGE">
+                    <tooltip text="STORAGE"/>
+                </button>
+                <button icon="STRIKETHROUGH">
+                    <tooltip text="STRIKETHROUGH"/>
+                </button>
+                <button icon="SUBSCRIPT">
+                    <tooltip text="SUBSCRIPT"/>
+                </button>
+                <button icon="SUITCASE">
+                    <tooltip text="SUITCASE"/>
+                </button>
+                <button icon="SUN_DOWN">
+                    <tooltip text="SUN_DOWN"/>
+                </button>
+                <button icon="SUN_O">
+                    <tooltip text="SUN_O"/>
+                </button>
+                <button icon="SUN_RISE">
+                    <tooltip text="SUN_RISE"/>
+                </button>
+                <button icon="SUPERSCRIPT">
+                    <tooltip text="SUPERSCRIPT"/>
+                </button>
+                <button icon="SWORD">
+                    <tooltip text="SWORD"/>
+                </button>
+                <button icon="TAB_A">
+                    <tooltip text="TAB_A"/>
+                </button>
+                <button icon="TAB">
+                    <tooltip text="TAB"/>
+                </button>
+                <button icon="TABLE">
+                    <tooltip text="TABLE"/>
+                </button>
+                <button icon="TABLET">
+                    <tooltip text="TABLET"/>
+                </button>
+                <button icon="TABS">
+                    <tooltip text="TABS"/>
+                </button>
+                <button icon="TAG">
+                    <tooltip text="TAG"/>
+                </button>
+                <button icon="TAGS">
+                    <tooltip text="TAGS"/>
+                </button>
+                <button icon="TASKS">
+                    <tooltip text="TASKS"/>
+                </button>
+                <button icon="TAXI">
+                    <tooltip text="TAXI"/>
+                </button>
+                <button icon="TEETH">
+                    <tooltip text="TEETH"/>
+                </button>
+                <button icon="TERMINAL">
+                    <tooltip text="TERMINAL"/>
+                </button>
+                <button icon="TEXT_HEIGHT">
+                    <tooltip text="TEXT_HEIGHT"/>
+                </button>
+                <button icon="TEXT_INPUT">
+                    <tooltip text="TEXT_INPUT"/>
+                </button>
+                <button icon="TEXT_LABEL">
+                    <tooltip text="TEXT_LABEL"/>
+                </button>
+                <button icon="TEXT_WIDTH">
+                    <tooltip text="TEXT_WIDTH"/>
+                </button>
+                <button icon="THIN_SQUARE">
+                    <tooltip text="THIN_SQUARE"/>
+                </button>
+                <button icon="THUMBS_DOWN_O">
+                    <tooltip text="THUMBS_DOWN_O"/>
+                </button>
+                <button icon="THUMBS_DOWN">
+                    <tooltip text="THUMBS_DOWN"/>
+                </button>
+                <button icon="THUMBS_UP_O">
+                    <tooltip text="THUMBS_UP_O"/>
+                </button>
+                <button icon="THUMBS_UP">
+                    <tooltip text="THUMBS_UP"/>
+                </button>
+                <button icon="TICKET">
+                    <tooltip text="TICKET"/>
+                </button>
+                <button icon="TIME_BACKWARD">
+                    <tooltip text="TIME_BACKWARD"/>
+                </button>
+                <button icon="TIME_FORWARD">
+                    <tooltip text="TIME_FORWARD"/>
+                </button>
+                <button icon="TIMER">
+                    <tooltip text="TIMER"/>
+                </button>
+                <button icon="TOOLBOX">
+                    <tooltip text="TOOLBOX"/>
+                </button>
+                <button icon="TOOLS">
+                    <tooltip text="TOOLS"/>
+                </button>
+                <button icon="TOOTH">
+                    <tooltip text="TOOTH"/>
+                </button>
+                <button icon="TOUCH">
+                    <tooltip text="TOUCH"/>
+                </button>
+                <button icon="TRAIN">
+                    <tooltip text="TRAIN"/>
+                </button>
+                <button icon="TRASH">
+                    <tooltip text="TRASH"/>
+                </button>
+                <button icon="TREE_TABLE">
+                    <tooltip text="TREE_TABLE"/>
+                </button>
+                <button icon="TRENDING_DOWN">
+                    <tooltip text="TRENDING_DOWN"/>
+                </button>
+                <button icon="TRENDING_UP">
+                    <tooltip text="TRENDING_UP"/>
+                </button>
+                <button icon="TROPHY">
+                    <tooltip text="TROPHY"/>
+                </button>
+                <button icon="TRUCK">
+                    <tooltip text="TRUCK"/>
+                </button>
+                <button icon="TWIN_COL_SELECT">
+                    <tooltip text="TWIN_COL_SELECT"/>
+                </button>
+                <button icon="TWITTER_SQUARE">
+                    <tooltip text="TWITTER_SQUARE"/>
+                </button>
+                <button icon="TWITTER">
+                    <tooltip text="TWITTER"/>
+                </button>
+                <button icon="UMBRELLA">
+                    <tooltip text="UMBRELLA"/>
+                </button>
+                <button icon="UNDERLINE">
+                    <tooltip text="UNDERLINE"/>
+                </button>
+                <button icon="UNLINK">
+                    <tooltip text="UNLINK"/>
+                </button>
+                <button icon="UNLOCK">
+                    <tooltip text="UNLOCK"/>
+                </button>
+                <button icon="UPLOAD_ALT">
+                    <tooltip text="UPLOAD_ALT"/>
+                </button>
+                <button icon="UPLOAD">
+                    <tooltip text="UPLOAD"/>
+                </button>
+                <button icon="USER_CARD">
+                    <tooltip text="USER_CARD"/>
+                </button>
+                <button icon="USER_CHECK">
+                    <tooltip text="USER_CHECK"/>
+                </button>
+                <button icon="USER_CLOCK">
+                    <tooltip text="USER_CLOCK"/>
+                </button>
+                <button icon="USER_HEART">
+                    <tooltip text="USER_HEART"/>
+                </button>
+                <button icon="USER_STAR">
+                    <tooltip text="USER_STAR"/>
+                </button>
+                <button icon="USER">
+                    <tooltip text="USER"/>
+                </button>
+                <button icon="USERS">
+                    <tooltip text="USERS"/>
+                </button>
+                <button icon="VAADIN_H">
+                    <tooltip text="VAADIN_H"/>
+                </button>
+                <button icon="VAADIN_V">
+                    <tooltip text="VAADIN_V"/>
+                </button>
+                <button icon="VIEWPORT">
+                    <tooltip text="VIEWPORT"/>
+                </button>
+                <button icon="VIMEO_SQUARE">
+                    <tooltip text="VIMEO_SQUARE"/>
+                </button>
+                <button icon="VIMEO">
+                    <tooltip text="VIMEO"/>
+                </button>
+                <button icon="VOLUME_DOWN">
+                    <tooltip text="VOLUME_DOWN"/>
+                </button>
+                <button icon="VOLUME_OFF">
+                    <tooltip text="VOLUME_OFF"/>
+                </button>
+                <button icon="VOLUME_UP">
+                    <tooltip text="VOLUME_UP"/>
+                </button>
+                <button icon="VOLUME">
+                    <tooltip text="VOLUME"/>
+                </button>
+                <button icon="WALLET">
+                    <tooltip text="WALLET"/>
+                </button>
+                <button icon="WARNING">
+                    <tooltip text="WARNING"/>
+                </button>
+                <button icon="WORKPLACE">
+                    <tooltip text="WORKPLACE"/>
+                </button>
+                <button icon="WRENCH">
+                    <tooltip text="WRENCH"/>
+                </button>
+                <button icon="YOUTUBE_SQUARE">
+                    <tooltip text="YOUTUBE_SQUARE"/>
+                </button>
+                <button icon="YOUTUBE">
+                    <tooltip text="YOUTUBE"/>
+                </button>
+            </gridLayout>
         </initialLayout>
     </appLayout>
 </mainView>
