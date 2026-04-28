@@ -6,12 +6,15 @@ import com.vaadin.flow.component.html.Image;
 import com.vaadin.flow.data.renderer.ComponentRenderer;
 import com.vaadin.flow.data.renderer.Renderer;
 import com.vaadin.flow.router.Route;
-import com.vaadin.flow.server.StreamResource;
+import com.vaadin.flow.server.streams.DownloadHandler;
+import com.vaadin.flow.server.streams.DownloadResponse;
+import com.vaadin.flow.server.streams.InputStreamDownloadHandler;
 import io.jmix.core.FileRef;
-import io.jmix.core.FileStorage;
+import io.jmix.core.FileStorageLocator;
 import io.jmix.flowui.UiComponents;
 import io.jmix.flowui.view.*;
 import org.springframework.beans.factory.annotation.Autowired;
+import java.io.InputStream;
 
 @Route(value = "users", layout = MainView.class)
 @ViewController(id = "User.list")
@@ -24,7 +27,7 @@ public class UserListView extends StandardListView<User> {
     private UiComponents uiComponents;
 
     @Autowired
-    private FileStorage fileStorage;
+    private FileStorageLocator fileStorageLocator;
 
     @Supply(to = "usersDataGrid.picture", subject = "renderer")
     private Renderer<User> usersDataGridPictureRenderer() {
@@ -34,10 +37,15 @@ public class UserListView extends StandardListView<User> {
                 Image image = uiComponents.create(Image.class);
                 image.setWidth("30px");
                 image.setHeight("30px");
-                StreamResource streamResource = new StreamResource(
-                        fileRef.getFileName(),
-                        () -> fileStorage.openStream(fileRef));
-                image.setSrc(streamResource);
+
+                InputStreamDownloadHandler handler =
+                        DownloadHandler.fromInputStream(event -> {
+                            InputStream inputStream = fileStorageLocator.getByName(
+                                    fileRef.getStorageName()).openStream(fileRef);
+                            return new DownloadResponse(
+                                    inputStream, fileRef.getFileName(), fileRef.getContentType(), -1);
+                        });
+                image.setSrc(handler);
                 image.setClassName("user-picture");
 
                 return image;
